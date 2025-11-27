@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- <html> etiqueta raíz de toda la página HTML.-->
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="iconos/Logo2.ico"> <!--Link del Favicon de la aplicacion--> 
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+	<title>register</title> <!-- REGISTRO DE HOBBIES PLACE-->
+</head>
+
+<body>
+    <!--1.2.Conservar regiter-->
+    <div class="container"> <!--Contenedor general-->
+        <div class="form-container"> <!--Contenedor formulario-->
+        <img class="img" src="Logo1.png" alt="Logo de Hobbies Place"/> <!--Logo de Hobbies Place-->
+            <h1>Resgistrase</h1>
+            <form action="" method="post" name="registro"> <!--1.2 Formulario de registro-->
+                <div> <!--Divisiones-->
+                    <label>Nombre</label>
+                    <input type="text" name="fullname" id="fullname" placeholder="Nombre completo" required=>
+                </div>
+                <div>
+                    <label>Correo electronico</label>
+                    <input type="email" id="email" name="email" placeholder="Correo electronico"> 
+                </div>
+                <div> 
+                    <label>Contraseña</label>
+                    <input type="password" id="pwd" name="pwd" required="Contraseña" placeholder="Contraseña">
+                </div>
+            <!--Boton para registrase-->
+            <button type="submit">Registrase</button>
+            </form>
+        </div>
+    </div>
+    <!--Fin-->
+</body>
+</html>
