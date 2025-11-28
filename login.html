@@ -5,25 +5,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="iconos/Logo2.ico"> <!--Link del Favicon de la aplicacion--> 
     <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
 	<title>Login</title> <!-- LOGIN DE HOBBIES PLACE-->
 </head>
 
 <body>
-    <!--1.1Conservar login-->
+    <!--1.1Conservar login / Formulario de Inicio de seccion-->
     <div class="container"> <!--Contenedor general-->
         <div class="form-container"> <!--Contenedor formulario-->
         <img class="img" src="Logo1.png" alt="Logo de Hobbies Place"/> <!--Logo de Hobbies Place-->
             <h1>Inicio de Seccion</h1>
             <form action="" method="post" name="login"> <!--1.2 Formulario de registro-->
                 <div> <!--Divisiones-->
-                    <label>Correo electronico</label>
-                    <input type="email" id="email" name="email"placeholder="Correo electronico">
+                     <label><i class="fa-solid fa-user"></i><!--icono de font awesome (user name)-->
+                        Correo electronico
+                    </label>
+                    <input type="email" id="email" name="email"placeholder="Correo electronico" >
                 </div>
                 <div>
-                    <label>Contraseña</label>
+                    <label><i class="fa-solid fa-lock"></i> <!--icono de font awesome (Password)-->
+                        Contraseña
+                    </label>
                     <input type="password" id="pwd" name="pwd" required="Contraseña" placeholder="Contraseña">
                 </div>
-            <p>Olvidaste tu contraseña</p>
+                <div class="">
+                    <a href=""> ¿Olvidaste tu contraseña?</a><!--Redireccion para la pagina para restablecer la contraseña-->
+                </div>
             <!--Boton para inicio de seccion-->
             <button type="submit">Inicio de seccion</button>
             </form>
