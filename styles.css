@@ -1,9 +1,8 @@
 body{ /*condigo css*/
     background-color: #FAFAFA; /* Define el color de fondo de la página como blanco. Conservar*/
 	font-family: Arial, Helvetica, sans-serif;/* Aplica la fuente Arial, Helvetica, sans-serif) a todo el texto dentro del body. Conservar*/
-    background-image: url("resources/images/imagen.jpg"); /*Imagen de fondo*/
-    background-attachment: fixed; /* fija la pantalla*/
-    background-size: cover; /* expande la imagen */
+    background: linear-gradient(135deg, #9a0526 0%, #1d1d1d 100%);
+    min-height: 100vh;
 }
 
 .img { /*Logo de Hobbies place codigo  (Clase Diseño de Sistemas 22/11/25)*/
@@ -23,24 +22,4 @@ body{ /*condigo css*/
     /*Codigo (Clase Diseño de Sistemas 22/11/25)*/
     width:50%;  /* 0 ancho de pixeles*/
     margin: 0 auto;
-}
-
-.form input {
-    border-style: solid; /* Aplica un borde sólido a los campos de entrada. Conservar*/
-    width: 100%; /* Hace que los campos de entrada ocupen el 100% del ancho del contenedor del formulario. Conservar*/
-    padding: 1rem; /* Agrega un relleno interno de 10 píxeles en los campos de entrada. Conservar*/
-    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total del campo de entrada. Conservar*/
-    margin: 8px 8px 0px 0px; /* Agrega un margen vertical de 10 píxeles entre los campos de entrada. Conservar*/
-    height: 1rem; /* Sugerencia de Jesus garcia*/
-    border-radius: 0.5rem;
-    border-width: 2px;
-    border-color: rgb(235, 233, 233);
-    background-color: rgb(255, 255, 255);
-    transition: 0.25s; /* Fin de la sugerencia de Jesus garcia*/
-}
-
-.form input:hover { /* Sugerencia de JG*/
-    border-color: rgb(0, 0, 0);
-    background-color: beige;
-    transition: 0.75s;/* Fin de la sugerencia de JG*/
 }
