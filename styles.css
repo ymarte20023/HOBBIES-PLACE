@@ -27,7 +27,8 @@ body{ /*condigo css*/
     border-radius: 20px; /* Aplica bordes redondeados al formulario con un radio de 5 píxeles. Conservar*/
     max-width: 400px; /* Limita el ancho máximo del formulario a 400 píxeles. Conservar*/
     background-color: #FFFFFF; /* Establece el color de fondo del formulario. Conservar*/
-    /*Codigo (Clase Diseño de Sistemas 22/11/25) 28/11/25 width:100%; */
+    
+    width:100%;
     margin: 0 auto; /* 0 ancho de pixeles*/
     text-align: center; /* Letras del titlo al centro*/
 }
@@ -61,4 +62,41 @@ body{ /*condigo css*/
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/*Contenedor general de los dos paneles*/
+.container-login {
+  width: 90%;
+  max-width: 1000px;
+  background-color: #ffffff10; /* ligero transparente para integrar con el fondo */
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Panel izquierdo */
+.left-panel {
+  flex: 1.2;
+  padding: 40px 40px;
+  color: #ffffff;
+  background: transparent; /* se ve el degradado del body */
+}
+
+.left-panel h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.left-panel p {
+  line-height: 1.5;
+  max-width: 380px;
+}
+
+/* Panel derecho */
+.right-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
 }
