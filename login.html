@@ -10,8 +10,16 @@
 </head>
 
 <body>
+
+<!--Panel izquierdo-->
+<div class=""> <!--Contenedor de inicio de seccion general-->
+        <section class="left-panel"> <!--Panael izquierdo-->
+            <h1>Bienvenido a Hobbies Place</h1>
+            <p>Tu tienda en línea de confianza para todo lo relacionado con el anime, manga y cultura pop. Explora nuestra amplia selección de productos exclusivos y sumérgete en el mundo del entretenimiento japonés.</p>
+        </section>
+<!--Panel derecho-->
     <!--1.1Conservar login / Formulario de Inicio de seccion-->
-    <div class="container"> <!--Contenedor general-->
+    <section class="right-panel"> <!--Panel derecho-->
         <div class="form-container"> <!--Contenedor formulario-->
         <img class="img" src="Logo1.png" alt="Logo de Hobbies Place"/> <!--Logo de Hobbies Place-->
             <h1>Inicio de Seccion</h1>
@@ -26,17 +34,19 @@
                 </div>
                 <!-- checkbox Recordar al usuario -->
                 <div class="">
-                    <label for="">Recordarme</label>
+                    <label>Recordarme</label>
                     <input type="checkbox" id="remember" name="remember">
-                </div>
-                <div class="">
-                    <a href=""> ¿Olvidaste tu contraseña?</a><!--Redireccion para la pagina para restablecer la contraseña-->
+                <a href=""> ¿Olvidaste tu contraseña?</a><!--Redireccion para la pagina para restablecer la contraseña-->
                 </div>
             <!--Boton para inicio de seccion-->
             <button type="submit">Inicio de seccion</button>
+                <div class="">
+                    <a href=""> ¿No tengo una cuenta?</a><!--Redireccion para la pagina para agregar nueva cuenta de usuario-->
+                </div>
             </form>
         </div>
-    </div>
-    <!--Fin del login-->
+    </section>
+</div> <!--Fin del contenedor de inicio de seccion general-->
+<!--Fin del login-->
 </body>
 </html>
