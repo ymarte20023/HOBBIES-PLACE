@@ -5,33 +5,42 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="iconos/Logo2.ico"> <!--Link del Favicon de la aplicacion--> 
     <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
 	<title>register</title> <!-- REGISTRO DE HOBBIES PLACE-->
 </head>
 
 <body>
-    <!--1.2.Conservar regiter-->
-    <div class="container"> <!--Contenedor general-->
+<!--Panel izquierdo-->
+<div class="container-login"> <!--Contenedor de inicio de seccion general-->
+    <section class="left-panel"> <!--Panael izquierdo-->
+        <h1>Bienvenido a Hobbies Place</h1>
+        <p>Tu tienda en línea de confianza para todo lo relacionado con el anime, manga y cultura pop. Explora nuestra amplia selección de productos exclusivos y sumérgete en el mundo del entretenimiento japonés.</p>
+    </section>
+<!--Panel derecho-->
+    <!--1.1Conservar login / Formulario de Inicio de seccion-->
+    <section class="right-panel"> <!--Panel derecho-->
         <div class="form-container"> <!--Contenedor formulario-->
         <img class="img" src="Logo1.png" alt="Logo de Hobbies Place"/> <!--Logo de Hobbies Place-->
             <h1>Resgistrase</h1>
             <form action="" method="post" name="registro"> <!--1.2 Formulario de registro-->
                 <div> <!--Divisiones-->
-                    <label>Nombre</label>
-                    <input type="text" name="fullname" id="fullname" placeholder="Nombre completo" required=>
+                    <label><i class="fa-solid fa-user"></i></label><!--icono de font awesome (user name)-->
+                    <input type="text" name="fullname" id="fullname" placeholder="Nombre de usuario" required=>
                 </div>
                 <div>
-                    <label>Correo electronico</label>
+                    <label><i class="fa-solid fa-envelope"></i></label><!--icono de font awesome (Email)-->
                     <input type="email" id="email" name="email" placeholder="Correo electronico"> 
                 </div>
                 <div> 
-                    <label>Contraseña</label>
+                    <label><i class="fa-solid fa-lock"></i></label><!--icono de font awesome (Password)-->
                     <input type="password" id="pwd" name="pwd" required="Contraseña" placeholder="Contraseña">
                 </div>
             <!--Boton para registrase-->
             <button type="submit">Registrase</button>
-            </form>
+           </form>
         </div>
-    </div>
-    <!--Fin-->
+    </section>
+</div> <!--Fin del contenedor de inicio de seccion general-->
+<!--Fin del register-->
 </body>
 </html>
