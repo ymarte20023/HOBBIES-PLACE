@@ -101,18 +101,18 @@ READMED.MD
   / Inventirio de Productos.
   / Usuarios
   / Ventas 
-* 9. 
+* 9. Hacer que las tablas de usuario, ventas, inventario se vean en el Dasboard.
 
 
 ## Tareas En proceso:
-
+* 3. Hacer y terminar la plantilla del sistema de facturacion. 
+*
 
 ## Tareas Pendientes:
 
 * 1. vista del Home.
 * 2. Perfil de usuario y edital los datos del perfil de usuario.
-* 3. Hacer y terminar la plantilla del sistema de facturacion. 
-* 4. Hacer que las tablas de usuario, ventas, inventario se vean en el Dasboard.
+* 4. 
 * 5.  
 * 6. 
 ---------------------------------------------------------------------------------------------------------------------------------------

@@ -1,4 +1,148 @@
+## Parte1
 
+## 1: DISEÑO DE SISTEMAS. 1.1. Diseño de Sistemas. Fases. Diseño mediante prototipos. 1.2. Propuesta: Preparación de la propuesta. Presentación de la propuesta de sistema. Diseño de sistemas y diseño de procesos.
+
+Grupo 1: El diseño de procesos y los procesos
+Grupo 2: Como son los diseños? centralizado, distribuido y operativo.
+Grupo 3: Codificación efectiva y eficiente tipos de coeficientes y captura de datos Grupo 4: codificación efectiva y eficiente
+
+### 💡 *1. Claridad y legibilidad del código*
+
+* Uso de nombres descriptivos para variables, funciones y clases.
+* Comentarios solo donde aporten valor (no redundantes).
+* Estructura y sangría coherentes.
+* Código autoexplicativo: fácil de entender sin documentación excesiva.
+
+📌 Beneficio: Facilita el mantenimiento, depuración y colaboración.
+
+### ⚙️ *2. Modularidad y reutilización*
+
+* División del código en funciones, clases y módulos independientes.
+* Aplicación del principio DRY (Don’t Repeat Yourself).
+* Reutilización de componentes para evitar duplicidad de lógica.
+
+📌 Beneficio: Reducción de errores y aumento de escalabilidad.
+
+### 🧠 *3. Eficiencia algorítmica*
+
+* Selección adecuada de estructuras de datos (listas, diccionarios, árboles, etc.).
+* Eliminación de operaciones redundantes o innecesarias.
+
+📌 Beneficio: Mejor rendimiento, menor consumo de recursos
+
+### 🧩 *4. Mantenibilidad*
+
+* Estructura lógica del proyecto (carpetas, módulos, dependencias claras).
+* Uso de patrones de diseño (MVC, Factory, Singleton, etc.) donde sea apropiado.
+* Documentación técnica básica (README, docstrings, diagramas).
+
+📌 Beneficio: Facilita la actualización y ampliación del código.
+
+### 🔒 *5. Seguridad y manejo de errores*
+
+* Validación de entradas y salidas.
+* Manejo adecuado de excepciones.
+* Evitar vulnerabilidades comunes (inyección, buffer overflow, etc.)
+
+📌 Beneficio: Código más robusto y confiable.
+
+### 🧪 *6. Pruebas y control de calidad*
+
+* Uso de pruebas unitarias, de integración y de rendimiento.
+* Revisión de código (code review) y análisis estático.
+
+📌 Beneficio: Mayor confiabilidad y detección temprana de errores.
+
+### 🔁 *7. Versionado y colaboración*
+
+* Uso de sistemas de control de versiones (Git).
+* Mensajes de commit claros y descriptivos.
+* Trabajo en ramas (branches) bien organizadas.
+
+📌 Beneficio: Trazabilidad y trabajo en equipo eficiente.
+
+### 🚀 *8. Escalabilidad y adaptabilidad*
+
+* Diseño que permita crecer sin reescribir grandes partes del sistema.
+* Separación entre lógica de negocio, presentación y datos.
+* Uso de principios SOLID.
+
+📌 Beneficio: Preparación para cambios futuros sin degradar el sistema.
+
+### 🚀 9. Captura de datos efectiva y eficiente
+
+Diseño de formularios claros y validados
+
+* Validación en cliente y servidor
+* Minimización de pasos y clics
+* Almacenamiento optimizado
+
+📌 Beneficio: Mejora la precisión, reduce errores humanos y agiliza el procesamiento de información.
+
+## Informacion inventigada:
+
+* Grupo 1: Diseño de procesos y los procesos
+El diseño de procesos implica definir y organizar las actividades, tareas y flujos para lograr un objetivo específico dentro de un sistema.
+
+- Es fundamental comprender los procesos actuales antes de diseñar mejoras o crear nuevos procesos.
+
+- Los procesos deben ser claros, eficientes y alineados con los objetivos del sistema.
+
+- Diseño mediante prototipos puede ayudar a visualizar y refinar procesos antes de su implementación.
+
+- Beneficios: mejora en la eficiencia operativa, reducción de costos y mayor control sobre las operaciones.
+
+* Grupo 2: Tipos de diseños: centralizado, distribuido y operativo
+
+
+| Tipo de Diseño | Descripción                                            | Características                              | Ventajas                                   | Desventajas                             |
+| -------------- | ------------------------------------------------------ | -------------------------------------------- | ------------------------------------------ | --------------------------------------- |
+| Centralizado   | El control y procesamiento se realiza en un nodo único | Fácil de administrar, control más estricto   | Mayor control y seguridad                  | Cuello de botella, menor escalabilidad  |
+| Distribuido    | El procesamiento se comparte entre varios nodos        | Mayor robustez y escalabilidad               | Mayor disponibilidad y tolerancia a fallos | Complejidad en sincronización y gestión |
+| Operativo      | Diseño orientado a las operaciones diarias y ejecución | Adaptado a los flujos de trabajo específicos | Optimiza tareas y mejora la productividad  | Puede ser rígido ante cambios rápidos   |
+
+
+* Grupo 3: Codificación efectiva y eficiente: tipos de coeficientes y captura de datos
+Codificación efectiva busca que el código sea claro, mantenible y libre de errores.
+
+- Codificación eficiente optimiza el rendimiento y uso de recursos.
+
+- Tipos de coeficientes pueden referirse a métricas de calidad o rendimiento del código.
+
+- Captura de datos debe diseñarse para minimizar errores humanos y asegurar integridad.
+
+- Formularios claros y validados con validación en cliente y servidor mejoran la calidad de datos.
+
+- Minimizar pasos y clics agiliza el proceso de captura.
+
+- Almacenamiento optimizado evita redundancias y facilita recuperación.
+
+* Grupo 4: Codificación efectiva y eficiente (en general)
+Claridad y legibilidad: nombres descriptivos, comentarios útiles, estructura coherente.
+
+- Modularidad y reutilización: funciones y clases independientes, principio DRY.
+
+- Eficiencia algorítmica: uso adecuado de estructuras de datos, optimización de operaciones.
+
+- Mantenibilidad: patrones de diseño, documentación básica.
+
+- Seguridad y manejo de errores: validación, manejo de excepciones, evitar vulnerabilidades.
+
+- Pruebas y control de calidad: pruebas unitarias/integración, revisión de código.
+
+- Versionado y colaboración: uso de Git y buenas prácticas.
+
+- Escalabilidad y adaptabilidad: diseño SOLID, separación de capas.
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Parte2
 ## Unidades de diseño de sistemas. 
 **Unidad 5- Diseño de interfaces de usuario.** Lunes de 19/Enero de 2026
 
