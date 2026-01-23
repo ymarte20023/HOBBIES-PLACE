@@ -22,26 +22,104 @@
         </a>
     </div>
     <div class="table-responsive">
-        <table>
-            <thead>
+        <table><!--tabla completa -->
+            <thead> <!-- Encabezado de la tabla -->
                 <tr>
                     <th>ID Usuario</th>
                     <th>Nombre Completo</th>
-                    <th>Correo Electrónico</th>
                     <th>Rol</th>
+                    <th>Correo Electrónico</th>
                     <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
-            </thead>
-            <tbody>
+            </thead> <!-- Fin del encabezado de la tabla -->
+
+            <tbody><!-- F1 -->
                 <tr>
-                    <td>1</td>
-                    <td>Admin Principal</td>
+                    <td><strong>#USR-001</strong></td>
                     <td>
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-weight: 600;">Edgar Reyes</span>
+                            <small style="color: #64748b;">Última conexión: Hoy</small>
+                        </div>
+                    </td>
+                    <td><span class="role-badge"> <strong>Administrador principal</strong></span></td>
+                    <td>EdgarReyes@email.com</td>
+                    <td><span class="status-pill status-success">Activo</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr><!-- F2 -->
+                    <td><strong>#USR-002</strong></td>
+                    <td>
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-weight: 600;">Daniel Reyes</span>
+                            <small style="color: #64748b;">Última conexión: Ayer</small>
+                        </div>
+                    </td>
+                    <td><span class="role-badge"> <strong>Administrador secundario</strong></span></td>
+                    <td>DanielReyes@email.com</td>
+                    <td><span class="status-pill status-success">Activo</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
-        </table>
-     <div class="table-responsive">
+
+            <tbody> <!-- F3 -->
+                <tr>
+                    <td><strong>#USR-003</strong></td>
+                    <td>
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-weight: 600;">Salvador Torres</span>
+                            <small style="color: #64748b;">Última conexión: Hoy</small>
+                        </div>
+                    </td>
+                    <td><span class="role-badge"> <strong>Usuario</strong></span></td>
+                    <td>SalvadorTorrez@email.com</td>
+
+                    <td><span class="status-pill status-danger">Inactivo</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            
+            <tbody> <!-- F4 -->
+                <tr>
+                    <td><strong>#USR-004</strong></td>
+                    <td>
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-weight: 600;">Alexander Gonzales</span>
+                            <small style="color: #64748b;">Última conexión: Ayer</small>
+                        </div>
+                    </td>
+                    <td><span class="role-badge"> <strong>Usuario</strong></span></td>
+                    <td>AlexanderGonzales@email.com</td>
+                    <td><span class="status-pill status-danger">Inactivo</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table> <!-- Fin de la tabla completa -->
+    </div>
+</div>
+
+            
 <!--Fin del codigo -->
 </body>
 </html>

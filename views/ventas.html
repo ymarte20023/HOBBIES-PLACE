@@ -23,8 +23,8 @@
     </div>
 
     <div class="table-responsive">
-        <table>
-            <thead>
+        <table><!--tabla completa -->
+            <thead> <!-- Encabezado de la tabla -->
                 <tr>
                     <th>ID Pedido</th>
                     <th>Producto / Cliente</th>
@@ -35,8 +35,8 @@
                     <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
-            </thead>
-            <tbody>
+            </thead> <!-- Fin del encabezado de la tabla -->
+            <tbody> <!-- cuerpo principal de los datos/F1 -->
                 <tr>
                     <td><strong>#PED-1024</strong></td>
                     <td>
@@ -46,8 +46,8 @@
                         </div>
                     </td>
                     <td>1</td>
-                    <td>$15.00</td>
-                    <td><strong>$45.00</strong></td>
+                    <td>$04.00</td>
+                    <td><strong>16.290,75 Bs</strong></td>
                     <td>16/01/2026</td>
                     <td><span class="status-pill status-success">Entregado</span></td>
                     <td>
@@ -57,6 +57,8 @@
                         </div>
                     </td>
                 </tr>
+            </tbody><!-- Fin del cuerpo principal de los datos -->
+            <tbody> <!--F2 -->
                 <tr>
                     <td><strong>#PED-1025</strong></td>
                     <td>
@@ -66,8 +68,8 @@
                         </div>
                     </td>
                     <td>1</td>
-                    <td>$85.00</td>
-                    <td><strong>$85.00</strong></td>
+                    <td>$04.00</td>
+                    <td><strong>16.290,75 Bs</strong></td>
                     <td>15/01/2026</td>
                     <td><span class="status-pill status-pending">Pendiente</span></td>
                     <td>
@@ -78,7 +80,53 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
+
+            <tbody> <!--F3 -->
+                <tr>
+                    <td><strong>#PED-1025</strong></td>
+                    <td>
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-weight: 600;">FlipTray 80+ Xenoskin – Blue</span>
+                            <small style="color: #64748b;">Cliente: Carlos Aguiar</small>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>$06.00</td>
+                    <td><strong>18.618,00 Bs</strong></td>
+                    <td>15/01/2026</td>
+                    <td><span class="status-pill status-success">Entregado</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+            <tbody> <!--F4 -->
+                <tr>
+                    <td><strong>#PED-1025</strong></td>
+                    <td>
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-weight: 600;">Sidewinder 100+ Xenoskin – Green</span>
+                            <small style="color: #64748b;">Cliente: Daniel Parra</small>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>$06.00</td>
+                    <td><strong>18.618,00 Bs</strong></td>
+                    <td>15/01/2026</td>
+                    <td><span class="status-pill status-pending">Pendiente</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table> <!--Fin de la tabla -->
     </div>
 </div>
 

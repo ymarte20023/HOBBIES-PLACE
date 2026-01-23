@@ -96,9 +96,16 @@ READMED.MD
 * 4. De un Styles monolitico a un css dividido por las areas del sistema (login, register, Dasboard).
 * 5. Enlasamos las imagenes pára que se vuelva a ver el material..
 * 6. Imagenes de fondo para el register y el login.
-* 5. 
-* 5. 
-* 5. 
+* 7. Guardarmos cambios en el gihut.
+* 8. Terminamos de agregarle contenido a las tablas. 
+  / Inventirio de Productos.
+  / Usuarios
+  / Ventas 
+* 9. 
+
+
+## Tareas En proceso:
+
 
 ## Tareas Pendientes:
 
@@ -106,7 +113,7 @@ READMED.MD
 * 2. Perfil de usuario y edital los datos del perfil de usuario.
 * 3. Hacer y terminar la plantilla del sistema de facturacion. 
 * 4. Hacer que las tablas de usuario, ventas, inventario se vean en el Dasboard.
-* 5. Terminar de agregarle contenido a las tablas.  
+* 5.  
 * 6. 
 ---------------------------------------------------------------------------------------------------------------------------------------
 ## Preguntas:
@@ -132,9 +139,11 @@ READMED.MD
 3. Código reusable y prompts en IA.
 3. Interacciones intuitivas entre el usuario y el sistema.
 4. Empleados Dumi. 
+
 5. Como escribir un READMED.MD 
 - https://www.youtube.com/shorts/AQWeATBVZ0Y
 - https://www.ionos.com/es-us/digitalguide/paginas-web/desarrollo-web/archivo-readme/
+
 6. Extension para hacer que los iconos se vean bonitos. (Material icon)
 - https://www.youtube.com/shorts/m86SnMJ5Q4M
 
