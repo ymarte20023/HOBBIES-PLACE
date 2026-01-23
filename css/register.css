@@ -1,0 +1,137 @@
+/*Capitulo 1: Codigo del Register - Parte 002 (<!-- COMPLETADO-->)*/
+body { /*condigo css*/
+    background-color: #f0f4f8; /* Define el color de fondo de la página como blanco. Conservar*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Aplica la fuente Arial, Helvetica, sans-serif) a todo el texto dentro del body. Conservar*/
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/img/recurso3.jpg"); /* imagen de fondo */ /* Filtro negro (ajusta 0.4) */
+    background-size: cover;        /* Cubre toda el área sin estirar */
+    background-position: center;   /* Centra la imagen */
+    background-repeat: no-repeat;  /* No repite la imagen */
+    background-attachment: fixed;  /* Fija al hacer scroll (opcional) */
+} /*Fin de esta parte del codigo*/
+
+.img { /*Logo de Hobbies place codigo  (Clase Diseño de Sistemas 22/11/25)*/
+    display: block;
+    width: 256px; /* 0 ancho de pixeles*/
+    margin: 0 auto; /* Esto centra horizontalmente */
+    border-radius: 50%; /* redondedo 50% igual a circulo */
+} /*Fin de esta parte del codigo*/
+
+body:has(.container) { /*Contenedor general del login y register*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}/*Fin de esta parte del codigo*/
+
+.container { /*Estilo para los formularios*/
+    background-color: white;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+} /*Fin de esta parte del codigo*/
+
+.container form div { /* Conservar Codigo */
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+}  /* Fin del Codigo*/
+
+/* CAMPOS DEL TEXTO - Parte 002.*/
+.form-wrapper {  /*Contenedor del formulario: form-wrapper - Campos de texto*/
+    width: 100%;
+    max-width: 350px;
+} /* Fin del Codigo - Parte 2.1*/
+
+/* Título del formulario */
+.form-wrapper h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 800;
+} /* Fin del Codigo - Parte 2.2*/
+
+/* ICONOS: Codigo de los icocnos de Fon Awesome- Parte 002 - 2.3*/
+/* Contenedor de cada campo de entrada (Cada div)*/
+.form-wrapper label {/* Codigo de los icocnos de Fon Awesome*/
+ text-align: center;
+ color: #000000; /* Cambia los colores de los icocnos de Fon Awesome */
+ font-size: 17px; /* Cambia el tamaño de los icocnos de Fon Awesome */
+}/* Fin del Codigo - Parte 2.3.1*/
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 12px 15px;/* Caracteristicas originales */
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 0.9rem; /* Fin de las caracteristicas*/
+    width: 100%;       /* Alarga la barra del input del campo*/
+    margin-left: 10px; /* Espacio entre el icono y el campo de texto*/
+    outline: none; /* Elimina el borde negro al hacer clic el campo de texto */
+}/* Fin del Codigo - Parte 2.3.2*/
+
+/* BOTONES - Parte 003 */
+.btn-main { /* Codigo del Botón btn-main */
+    width: 100%;
+    padding: 12px;
+    background-color: #0e1111;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s; /* Tiempo en el que cambia el color*/
+}
+.btn-main:hover { /* Color por el que cambia la transicion*/
+    background-color: #333;
+}/*Fin de esta parte del codigo*/
+
+/*Contenedor general de los dos paneles - parte 004*/
+/* --- SECCIÓN IZQUIERDA (FORMULARIO) --- */
+.left-section { /* --- Panel izquierdo - FORMULARIO --- */
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} /*Fin de esta parte del codigo*/
+
+/* --- SECCIÓN DERECHA (IMAGEN) --- */
+.image-section { /* --- Panel derecho --- */
+    flex: 1;
+    background: url("/img/imagen1.jpg"); /*imagen del panel derecho del login*/
+    background-size: cover;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+} /*Fin de esta parte del codigo*/
+
+/* Toque visual para que el texto resalte sobre la imagen */
+.image-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+}/*Fin de esta parte del codigo*/
+
+/* RESPONSIVO PARA MÓVILES - Parte 005*/
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .image-section {
+        display: none; /* Ocultar imagen en pantallas muy pequeñas o reducir su tamaño */
+    }
+}/*Fin de esta parte del codigo*/
+
+/* Fin del Capitulo 1: Codigo del Register

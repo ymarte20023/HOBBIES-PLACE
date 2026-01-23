@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- LOGIN COMPLETADO.-->
+<html lang="es"> <!-- <html> etiqueta raíz de toda la página HTML.--> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/Logo2.ico"> <!--Link del Favicon de la aplicacion--> 
+    <link rel="stylesheet" href="/css/login.css"> <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
+    <title>Login - Hobbies Place</title> <!-- LOGIN DE HOBBIES PLACE-->
+</head>
+
+<body>
+<!--Panel izquierdo-->
+<div class="container"><!--Contenedor de login general-->
+    <div class="image-section"> <!--Panel izquierdo  /* --- SECCIÓN IZQUIERDA IMAGEN  --- */ -->
+    </div>
+<!--Panel derecho-->
+    <!--1.1Conservar login / Formulario de Inicio de seccion-->
+    <div class="right-section"> <!--Panel derecho /* --- SECCIÓN DERECHA --- */-->
+        <div class="form-wrapper"><!--Contenedor formulario-->
+        <img class="img" src="/img/Logo1.png" alt="Logo de Hobbies Place"/> <!--Logo de Hobbies Place (Logo) -->
+            <h1>Inicio de Seccion</h1>
+            <form action="" method="post" name="login"> <!--1.2 Formulario de registro-->
+                <div> <!--Los div son divisiones-->
+                     <label><i class="fa-solid fa-user"></i></label><!--icono de font awesome (user name)-->
+                    <input type="email" id="email" name="email" placeholder="Nombre de usuario" >
+                </div>
+                <div><!--Segunda divisiones del div-->
+                    <label><i class="fa-solid fa-lock"></i></label><!--icono de font awesome (Password)-->
+                    <input type="password" id="pwd" name="pwd" required="Contraseña" placeholder="Contraseña">
+                </div>
+                <!-- checkbox Recordar la contraseña para el usuario -->
+                <div class="">
+                    <input type="checkbox" id="remember" name="remember">
+                    <laber>Recordarme</laber>
+                <a href=""> ¿Olvidaste tu contraseña?</a><!--Redireccion para la pagina para restablecer la contraseña-->
+                </div>
+            <!--Boton para inicio de seccion-->
+            <button type="submit" class="btn-main">Inicio de seccion</button>
+                <div class="">
+                    <p>¿No tengo una cuenta?</p>
+                    <a href=""> Registrarse</a><!--Redireccion para la pagina para agregar nueva cuenta de usuario-->
+                </div>
+            </form>
+        </div>
+    </section>
+</div> <!--Fin del contenedor de inicio de seccion general-->
+<!--Fin del login-->
+</body>
+</html>

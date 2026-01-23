@@ -1,0 +1,545 @@
+/*Capitulo 2: Codigo del Dashboard - Dividido en dos partes (Parte 1)*/
+/* --- TOP NAVBAR - Parte 001:Top Navbar--- */
+
+/* CONTENEDOR PRINCIPAL abarca: Entrada de presnetacion, siderbar, Top- Narvar */
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+} /*Fin de esta parte del codigo*/
+
+.main-view { /*Fondo completo*/
+    flex: 1; /* Toma todo el ancho del Dashboard*/
+    min-height: 100vh; /* Toma todo la altura completa del Dashboard */
+    background-color: #f8fafc; /* Color claro para la zona de trabajo (El fondo gris que ayuda que el color de fondo del Login y el register no se traspace para el Daboar)*/
+    background-image: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); /* Gradiente para estilizar mas ese cuadro  */
+    padding-top: 80px;
+    margin-left: 250px; /* Para evitar que el sidebar lo tape */
+    width: auto; /* Asegura que no esté limitado */
+    transition: margin-left 0.3s ease; /* Transición suave del Main view */
+}
+
+/* CONTENIDO DENTRO DEL FUNDO */
+.dashboard-content {
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}/*Fin de esta parte del codigo*/
+
+/* TOP NAVBAR FIJADO ARRIBA */
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Color del navbar (Color anterior por prueba #111827) */
+    padding: 1rem 2rem; /* Ancho el top napvar*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);    
+    position: fixed; /* Cambios para evitar superposición con el SIDEBAR */
+    top: 0;
+    left: 250px;/* despues del SIDEBAR*/
+    width: calc(100% - 250px); /* ANCHO DISPONIBLE */
+    z-index: 999;          /* ABAJO DEL SIDEBAR (z-index: 1000) */
+    transition: all 0.3s ease; /* Transición suave del Top Navbar */
+} /*Fin de esta parte del codigo*/
+
+/* Buscador - Seccion isquierdad del Navar*/
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #f3f4f6; /* Color del Buscador donde esta la lupa*/
+    padding: 0.1rem 1rem; /* Tamaño de la caja del buscador */
+    border-radius: 10px;
+    width: 300px;
+}
+
+.search-box i {
+    color: #b8aa94; /*Color de la luopa*/
+    margin-right: 10px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.9rem;
+    width: 100%;
+} /*Fin de esta parte del codigo*/
+
+/* Perfil y Notificaciones - Acciones de la Derecha */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.notifications-icon {
+    position: relative;
+    font-size: 1.2rem;
+    color: #64748b; /* Color de la campanita */
+    cursor: pointer;
+}
+
+.notifications-icon .dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background-color: #ef4444; /* Color del punto rojo de notificacion */
+    border-radius: 50%;
+    border: 2px solid #fff;
+} /*Fin de esta parte del codigo*/
+
+/* Bloque de Perfil */
+.user-profile {
+    display: flex; /* convierte un elemento en un contenedor flexible */
+    align-items: center; /* Alineacion del texto del perfil */
+    gap: 12px;
+    cursor: pointer;
+    padding: 5px 10px; /* espacio de la caja de perfil */
+    border-radius: 12px; /* del perfil */
+    transition: background 0.3s;
+}
+
+.user-profile:hover {
+    background-color: #f9fcf8; /* color de contendor del perfil y la frecha hacia abajo*/
+}
+
+.profile-text { /* Bloque de texto del perfil */
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1e293b; /*Color del nombre de usuario*/
+}
+
+.user-status {
+    font-size: 0.7rem;
+    color: #10b981; /*Color de estado en linea en el ssitema*/
+    font-weight: 600;
+}
+
+.profile-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #e2e8f0; /*Color del borde de la caja de perfil*/
+}
+.user-profile .fa-chevron-down {
+    font-size: 0.7rem;
+    color: #a4b894; /*Color de la flecha del perfil que indica hacia abajo*/
+}/*Fin de esta parte del codigo*/
+
+/*Parte 002:Menu de navegacion-siderbar*/
+/* 0. Variables de Color (Unificando Código 01 y 02) */
+:root { /* Duda para investigarla mas tarde porque trabajas con root*/
+    --color-bg-sidebar: #111827;    /* Azul oscuro para el fondo del Siderbar */
+    --color-primary: #334155;       /* Gris más claro para el hover del Siderbar - Color por si acaso:(#4A5568 gris medio)*/
+    --color-accent-cian: #e9e9e9f3; /* Color #e9e9e9 para los iconos */
+    --color-text-main: #ffffffe0;   /* Color del texto de los iconos */
+    --color-text-muted: #94a3b8;    /* Gris para títulos y submenús */
+    --color-logout: #cd0c36;        /* Rojo oscuro y vibrante, para cerrar sesión */
+    --transition: all 0.3s ease;      /* Transición suave para hover y otros efectos */
+} /*Fin de esta parte del codigo*/
+
+/* 0. Reset básico */
+* {
+    margin: 0;    /* Elimina el margen por defecto*/
+    padding: 0;   /* Elimina el padding por defecto */
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} /*Fin de esta parte del codigo*/
+
+/* 1. Contenedor principal del Logo */
+.logo {
+    padding: 1.5rem 1rem; /* Más aire arriba y a los lados */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Línea sutil divisoria */
+    /* Alinea el icono del boton */
+    display: flex;             /* Activa Flexbox */
+    align-items: center;       /* Alinea verticalmente al centro */
+    justify-content: space-between; /* Empuja el texto a la izquierda y el botón a la derecha */
+
+}
+/* Tipografía */
+.logo-text {
+    color: #ffffff;
+    font-size: 1.15rem;   /* Un poco más grande */
+    font-weight: 700;     /* Más grosor para impacto */
+    letter-spacing: -0.5px; /* Estilo de diseño moderno */
+    font-family: 'Inter', 'Segoe UI', sans-serif; /* Tipografías limpias */
+} 
+
+/* Estilo del Botón de maximizar/minimizar */
+.menu-btn {
+    color: #ffffff;            /* Color blanco para el icono */
+    cursor: pointer;           /* Cambia el cursor a mano al pasar encima */
+    font-size: 1.2rem;         /* Tamaño del icono */
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efecto opcional para que el botón resalte al pasar el mouse */
+.menu-btn:hover {
+    transform: scale(1.1);     /* Crece un poquito */
+    color: var(--color-text-muted); /* Opcional: cambia ligeramente el tono */
+} /*Fin de esta parte del codigo*/
+
+/* 2. Contenedor Principal */
+.content-wrapper {
+    display: flex;
+    height: 100vh;
+}/*Fin de esta parte del codigo*/
+
+/* 3. Sidebar ORIGINAL con lógica de fijeza */
+.sidebar {
+    width: 250px; /*ancho del siderbar*/
+    height: 100vh; /*altura del siderbar*/
+    background-color: var(--color-bg-sidebar);
+    display: flex;
+    flex-direction: column; /*Indicamos que sus elementos internos estan ubicados en columnas*/
+    position: fixed; /* Fijo al lado izquierdo*/
+    top: 0;
+    left: 0;
+    z-index: 100; /*para que este encima de otros elementos*/
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /*Sombra para identificar que donde esta el menu*/
+    transition: var(--transition);
+} /*Fin de esta parte del codigo*/
+
+/* Contenedor del menú con scroll si es necesario (Esto es lo que permite bajar y subir)*/
+.Menu-siderbar {
+    padding: 1.5rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+} /*Fin de esta parte del codigo*/
+
+/* 4. Títulos de Grupo (Operativa, Análisis...) */
+.group-title {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--color-text-muted);
+    margin: 1.5rem 0 0.5rem 0.8rem; /* Espaciado lógico */
+} /*Fin de esta parte del codigo*/
+
+/* 5. Listas y Enlaces */
+.menu {
+    list-style: none;
+    width: 100%;
+}
+
+.menu-item {
+    list-style: none;
+    margin-bottom: 0.2rem;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0.8rem;
+    color: var(--color-text-main);
+    text-decoration: none;
+    border-radius: 0.4rem; /*Las esquinas se estan haciendo redondeadas*/
+    transition: var(--transition);
+} /*Fin de esta parte del codigo*/
+
+/* 1.1. Iconos*/
+.menu-link i:first-child {
+    font-size: 1.1rem;
+    width: 25px;
+    color: var(--color-accent-cian);
+    margin-right: 0.8rem;
+    text-align: center;
+}
+
+/*1.1. Texto de los iconos*/
+.menu-link span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* 1.1. Icono de flecha desplegable (derecha) */
+.fa-angle-down {
+    margin-left: auto;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}/*Fin de esta parte del codigo*/
+
+/* 6. Efecto Hover*/
+.menu-link:hover {
+    background-color: var(--color-primary);
+    color: rgb(255, 255, 255);
+}/*Fin de esta parte del codigo*/
+
+/* 7. Sub-menús (Dropdowns) */
+.menu-dropdown {
+    list-style: none;
+    padding-left: 2.5rem; /* Alineado con el texto de arriba */
+    background-color: rgba(255, 255, 255, 0.03); /* Ligero fondo para diferenciar (Frecha desplegable) */
+}
+
+.sub-menu-link {
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.sub-menu-link:hover {
+    color: var(--color-accent-cian);
+} /*Fin de esta parte del codigo*/
+
+/* 8. Sección Footer (Perfil y Salir) */
+.footer-menu {
+    margin-top: auto; /* Empuja al fondo */
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);  /* Estilo de línea superior */
+}
+
+.logout .menu-link i { /*Icono de logout - Pasa directo y define el color */
+    color: var(--color-logout);
+}
+
+.logout .menu-link:hover {
+    background-color: rgba(255, 77, 0, 0.15); /* Hover suave rojizo */
+} /*Fin de esta parte del codigo*/
+
+/* 9. Área de Contenido Principal */
+.siderbar-view {
+    flex: 0;
+    margin-left: 250px; /* Evita que el sidebar tape el contenido */
+    padding: 2rem;
+    background-color: #f4f7f6; /* Color claro para la zona de trabajo */    
+}/*Fin de esta parte del codigo*/
+
+/* 10. Ocultar submenú por defecto */
+.menu-dropdown {
+    list-style: none;
+    padding-left: 2.5rem;
+    max-height: 0;          /* Altura cero para ocultar */
+    overflow: hidden;       /* Corta el contenido sobrante */
+    transition: max-height 0.4s ease; /* Animación suave */
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Mostrar cuando el padre tenga la clase .open */
+.menu-item-dropdownc.open .menu-dropdown {
+    max-height: 300px;      /* Altura suficiente para mostrar los hijos */
+}
+
+/* Rotar la flecha cuando esté abierto */
+.menu-item-dropdownc.open .fa-angle-down {
+    transform: rotate(180deg);
+} /*Fin de esta parte del codigo*/
+
+/* 11. Sidebar colapsado (minimizado) */
+.sidebar.collapsed {
+    width: 80px; /* Ancho pequeño solo para iconos */
+}
+/* Ocultar el texto del logo y de los menús */
+.sidebar.collapsed .logo-text,
+.sidebar.collapsed .menu-link span,
+.sidebar.collapsed .group-title,
+.sidebar.collapsed .fa-angle-down {
+    display: none;
+}
+
+/* Centrar los iconos cuando está colapsado */
+.sidebar.collapsed .menu-link {
+    justify-content: center;
+    padding: 0.8rem;
+}
+
+.sidebar.collapsed .menu-link i {
+    margin-right: 0; /* Quita el espacio del texto oculto */
+    font-size: 1.3rem;
+}
+
+/* Ajustar el logo cuando está colapsado */
+.sidebar.collapsed .logo {
+    justify-content: center;
+    padding: 1.5rem 0;
+} /* Fin del codigo */
+
+/* Ajuste para que se desplace en el colapso tanto para el .main-view como .top-navbar para el dasboard*/
+.sidebar.collapsed ~ .main-view {
+    margin-left: 80px;
+}
+
+.sidebar.collapsed ~ .main-view .top-navbar {
+    left: 80px;
+    width: calc(100% - 80px);
+}/* Fin del codigo */
+
+/* ransición sea fluida y que el texto no aparezca "encimado" para el dasboard*/
+
+.sidebar.collapsed .menu-item-dropdownc .menu-dropdown {
+    display: none; /* Evita que el submenú se despliegue mientras el sidebar es pequeño */
+}
+
+.sidebar:not(.collapsed) .menu-item-dropdownc.open .menu-dropdown {
+    display: block;
+    max-height: 500px; /* O el valor que ya tenías */
+}/* Fin del codigo */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Capitulo 3: Tablas - 14/01/2026* 16/01/2026*/
+/* parte 01: Tabla de ventas*/
+
+/* 1.1 Tabla de ventas*/
+/* Contenedor tipo tarjeta */
+.card-table {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+/* Cabecera de la tabla */
+.table-header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.header-title h2 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 1.25rem;
+}
+
+.header-title p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+/* Botón de acción principal */
+.btn-main-action {
+    background-color: var(--color-bg-sidebar);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-main-action:hover {
+    background-color: #334155;
+}
+
+/* Estilos de la Tabla */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table thead th {
+    background-color: #f8fafc;
+    padding: 1rem 1.5rem;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.2s;
+}
+
+table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+table tbody td {
+    padding: 1rem 1.5rem;
+    color: #334155;
+    font-size: 0.9rem;
+}
+
+/* Estados (Pills) */
+.status-pill {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-pending {
+    background-color: #fef9c3;
+    color: #854d0e;
+}
+
+/* Botones de acción en fila */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-icon.edit {
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+
+.btn-icon.delete {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.btn-icon:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.9);
+}
+/* Fin del codigo */

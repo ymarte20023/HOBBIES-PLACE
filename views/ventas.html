@@ -1,0 +1,88 @@
+<!DOCTYPE html> <!-- Tabla 01 (Ventas)-->
+<html lang="es"> <!-- <html> etiqueta raíz de toda la página HTML.-->
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/Logo2.ico"> <!--Link del Favicon de la aplicacion--> 
+    <link rel="stylesheet" href="/css/dashboard.css"> <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
+	<title>Ventas</title> <!-- DASHBOARD DE HOBBIES PLACE-->
+</head> 
+<body>
+
+<!-- tabla de ventas -->
+    <div class="card-table">
+    <div class="table-header">
+        <div class="header-title">
+            <h2>Gestión de Ventas</h2>
+            <p>Listado detallado de pedidos y transacciones realizados</p>
+        </div>
+        <a href="#" class="btn-main-action" style="text-decoration: none;">
+            <i class="fas fa-cart-plus"></i> Registrar Pedido
+        </a>
+    </div>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Pedido</th>
+                    <th>Producto / Cliente</th>
+                    <th>Unidades</th>
+                    <th>Precio Unit.</th>
+                    <th>Total</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>#PED-1024</strong></td>
+                    <td>
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-weight: 600;">Flexxfolio 480 24-Pocket – Red</span>
+                            <small style="color: #64748b;">Cliente: Carlos Ruiz</small>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>$15.00</td>
+                    <td><strong>$45.00</strong></td>
+                    <td>16/01/2026</td>
+                    <td><span class="status-pill status-success">Entregado</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>#PED-1025</strong></td>
+                    <td>
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-weight: 600;">Flexxfolio 360 18-Pocket – Blue</span>
+                            <small style="color: #64748b;">Cliente: Ana Martínez</small>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>$85.00</td>
+                    <td><strong>$85.00</strong></td>
+                    <td>15/01/2026</td>
+                    <td><span class="status-pill status-pending">Pendiente</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Fin del codigo-->
+
+</body>
+</html>
