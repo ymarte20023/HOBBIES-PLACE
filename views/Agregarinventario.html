@@ -338,10 +338,12 @@
             </div> <!--Fin del codigo -->
         </div>
         <!--Fin del codigo -->
-<div id="modalInventario" class="modal-container"> 
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3><i class="fas fa-box-open"></i> Registrar Nuevo Producto</h3>
+
+        <!-- Fin del codigo-->
+         <div id="modalInventario" class="modal-container">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h3><i class="fas fa-plus-circle"></i> Registrar Nuevo Producto</h3>
             <button class="close-modal" type="button">&times;</button>
         </div>
 
@@ -351,14 +353,13 @@
                     <h4>Información Básica</h4>
                     <div class="input-group">
                         <label for="prod-nombre">Nombre del Producto</label>
-                        <input type="text" id="prod-nombre" placeholder="Ej: Magic 60 – Card Theme Pirates" required>
+                        <input type="text" id="prod-nombre" placeholder="Ej: One Piece Starter Deck ST27" required>
                     </div>
-                    
+
                     <div class="form-row">
                         <div class="input-group">
                             <label for="prod-categoria">Categoría</label>
                             <select id="prod-categoria" required>
-                                <option value="" disabled selected>Seleccione...</option>
                                 <option value="cartas">Cartas</option>
                                 <option value="accesorios">Accesorios</option>
                                 <option value="juegos-mesa">Juegos de Mesa</option>
@@ -369,10 +370,7 @@
                             <input type="text" id="prod-imagen" placeholder="/img/nuevo-producto.png">
                         </div>
                     </div>
-                </div>
 
-                <div class="form-section">
-                    <h4>Valores y Existencia</h4>
                     <div class="form-row">
                         <div class="input-group">
                             <label for="prod-stock">Stock Inicial</label>
@@ -383,26 +381,20 @@
                             <input type="number" step="0.01" id="prod-precio" placeholder="0.00" required>
                         </div>
                     </div>
+
                     <div class="input-group">
                         <label for="prod-sku">ID / SKU Personalizado</label>
                         <input type="text" id="prod-sku" placeholder="Ej: #010">
                     </div>
-                </div>
-            </div>
 
-            <div class="form-section full-width">
-                <div class="input-group">
-                    <label for="prod-descripcion">Descripción del Producto</label>
-                    <textarea id="prod-descripcion" rows="3" placeholder="Describe las características del producto..."></textarea>
+                    <div class="input-group">
+                        <label for="prod-descripcion">Descripción del Producto</label>
+                        <textarea id="prod-descripcion" rows="3" placeholder="Describe las características del producto..."></textarea>
+                    </div>
                 </div>
             </div>
 
             <div class="form-footer">
-                <div class="status-info">
-                    <p>
-                        <i class="fas fa-info-circle"></i> El producto aparecerá inmediatamente en la tabla.
-                    </p>
-                </div>
                 <div class="form-actions">
                     <button type="button" class="btn-secondary">Cancelar</button>
                     <button type="submit" class="btn-main-action">Guardar en Inventario</button>
@@ -411,3 +403,6 @@
         </form>
     </div>
 </div>
+</section> 
+</body>
+</html>
