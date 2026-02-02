@@ -292,85 +292,59 @@
             <!-- Fin del codigo-->
             
             <!-- Fin del codigo-->
-
-                        <div id="modalProveedor" class="modal-container"> 
+            <div id="modalProveedor" class="modal-container"> 
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3><i class="fas fa-truck"></i> Registrar Nuevo Proveedor</h3>
+                        <h3><i class="fas fa-plus-circle"></i> Registrar Nuevo Proveedor</h3>
                         <button class="close-modal" type="button">&times;</button>
                     </div>
 
                     <form class="modal-form">
                         <div class="form-grid">
                             <div class="form-section">
-                                <h4>Datos de la Empresa</h4>
+                                <h4>Información de contacto</h4> <!-- Titulo-->
                                 <div class="input-group">
                                     <label for="prov-nombre">Nombre de la Empresa</label>
-                                    <input type="text" id="prov-nombre" placeholder="Ej: Distribuidora Multiverso TCG" required>
+                                    <input type="text" id="prov-nombre" placeholder="Ej: Multiverso TCG Wholesale" required>
                                 </div>
-                                
                                 <div class="form-row">
                                     <div class="input-group">
-                                        <label for="prov-rif">RIF / Identificación</label>
-                                        <input type="text" id="prov-rif" placeholder="J-12345678-9" required>
+                                        <label for="prov-email">Correo Electrónico</label>
+                                        <input type="email" id="prov-email" placeholder="ventas@empresa.com" required>
                                     </div>
-                                    <div class="input-group">
-                                        <label for="prov-categoria">Categoría</label>
-                                        <select id="prov-categoria" required>
-                                            <option value="" disabled selected>Seleccione...</option>
-                                            <option value="cartas">Cartas</option>
-                                            <option value="accesorios">Accesorios</option>
-                                            <option value="juegos-mesa">Juegos de Mesa</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="form-section">
-                                <h4>Información de Contacto</h4>
-                                <div class="input-group">
-                                    <label for="prov-email">Correo Electrónico</label>
-                                    <input type="email" id="prov-email" placeholder="ventas@empresa.com" required>
-                                </div>
-                                
-                                <div class="form-row">
                                     <div class="input-group">
                                         <label for="prov-tel">Teléfono</label>
-                                        <input type="tel" id="prov-tel" placeholder="+58 412-0000000" required>
+                                        <input type="tel" id="prov-tel" placeholder="+58 412-7519223" required>
                                     </div>
+
                                     <div class="input-group">
                                         <label for="prov-contacto">Persona de Contacto</label>
                                         <input type="text" id="prov-contacto" placeholder="Ej: Marcos Peña">
                                     </div>
                                 </div>
+
+                                <div class="input-group">
+                                    <label for="prov-categoria">Categoría</label>
+                                    <select id="prov-categoria" required>
+                                        <option value="cartas">Cartas</option>
+                                        <option value="accesorios">Accesorios</option>
+                                        <option value="juegos-mesa">Juegos de Mesa</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="form-section full-width">
-                            <div class="input-group">
-                                <label for="prov-dir">Dirección Física</label>
-                                <textarea id="prov-dir" rows="2" placeholder="Ubicación de la distribuidora..."></textarea>
-                            </div>
-                        </div>
-
+                        <!-- Caja de texto textarea-->
+                        <!-- Titulo-->
                         <div class="form-footer">
-                            <div class="status-info">
-                                <p>
-                                    <i class="fas fa-check-circle"></i> El proveedor se registrará como <strong>Activo</strong>.
-                                </p>
-                            </div>
                             <div class="form-actions">
                                 <button type="button" class="btn-secondary">Cancelar</button>
                                 <button type="submit" class="btn-main-action">Guardar Proveedor</button>
                             </div>
                         </div>
                     </form>
-
-
-
-
-            </div>
-        </div> <!-- Fin del codigo-->
+                </div>
+            </div> <!-- Fin del codigo-->
     </section> 
 </body>
 </html>

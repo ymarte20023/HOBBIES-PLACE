@@ -737,34 +737,6 @@ table tbody td {
 }
 /* Fin del codigo */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Caputulo 5: Modales - 20/01/2026*/
 /* Agregar Dartos (Proveedor, ventas, usuarios, invnetario) */
 /* --- ESTILOS DEL MODAL (REGISTRAR VENTA) --- */
@@ -826,6 +798,7 @@ table tbody td {
     transition: color 0.2s;
 }
 
+/* 4. Color de la x para cerrar */
 .close-modal:hover {
     color: #ef4444;
 }
@@ -850,7 +823,7 @@ table tbody td {
 
 /* Color de las letras */
 .form-section h4 {
-    color: #8b7564;
+    color: #292458;
     border-bottom: 2px solid #f1f5f9;
     padding-bottom: 8px;
     margin-bottom: 15px;
@@ -932,19 +905,20 @@ input[readonly] {
 }
 
 .btn-secondary {
-    background: #e2e8f0;
-    color: #475569;
+    background: #be273e; /* Color del boton*/
+    color: #FFFFFF; /* Color de las letras */
     padding: 10px 20px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
     font-weight: 600;
+    transition: background 0.2s;
 }
 
 /* Color de los botones */
 .btn-primary {
-    background: #0e1111; /* Vercion que estamos modificando */
-    color: white;
+    background: #0e1111; /* Color del boton */
+    color: #FFFFFF; /* Color de las letras */
     padding: 10px 20px;
     border-radius: 6px;
     border: none;
@@ -955,6 +929,10 @@ input[readonly] {
 
 .btn-primary:hover {
     background: #333; /* Color al pasar el mouse */
+}
+
+.btn-secondary:hover {
+    background: #b62b40da; /* Color al pasar el mouse */
 }
 /* Fin del codigo */
 
