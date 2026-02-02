@@ -1,0 +1,149 @@
+<!DOCTYPE html> <!-- Dasboar completo - SuperAdministrador.-->
+<html lang="es"> <!-- <html> etiqueta raíz de toda la página HTML.-->
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/Logo2.ico"> <!--Link del Favicon de la aplicacion--> 
+    <link rel="stylesheet" href="/css/dashboard.css"> <!-- Enlace al archivo CSS externo -->
+    <script src="/js/script.js"></script><!-- Enlazar JavaScript con hojas HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
+	<title>Editar proveedores</title> <!-- DASHBOARD DE HOBBIES PLACE-->
+</head> 
+<body>
+<div class="dashboard-wrapper"> <!-- Contenedor principal del Dashboard-->
+<!--2.3 SIDEBAR/(Menu lateral)- TAREA: siderbar para el Dasboard menu responsibo y que se oculta.--> 
+<aside class="sidebar"> <!-- Parte 001: Contenedor de la barra lateral del siderbar-->
+        <!-- Logo dentro del sidebar -->
+        <div class="logo"> <!--Contenedor del logo--> 
+            <img class="img" src="/img/Logo2.png" alt="Logo de Hobbies Place"/> <!--Logo de Hobbies Place (Logo) -->
+            <!-- Boton para maximizar y minizar el sidebar-->
+            <div class="menu-btn"> <!--Contenedor del boton-->
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+        </div>
+    <!-- Parte 002: Menú dentro del sidebar-->
+    <nav class="Menu-siderbar"> <!--Contenedor del Menu-siderbar-->
+        <div class="menu-group"><!--1 Grupo-->
+        <span class="group-title">Operativa</span>
+        <ul class="menu"> <!--1.1 Contenedor del menu-->
+            <li class="menu-item menu-item-static"> <!--Lista1 Menu estatico que no se despliega-->
+                <a href="#" class="menu-link">           <!--Redireccion--> 
+                    <i class="fa-solid fa-house"></i>    <!--Icono de Fon awesome (hause)-->
+                    <span>Inicio</span>                  <!--nombre del icono en un spam--> <!--Esto es ivoculcrao para ir a la vista del Home-->
+                </a>
+            </li>
+            <li class="menu-item menu-item-static"><!--Lista2-->
+                <a href="#" class="menu-link">
+                    <i class="fa-brands fa-cash-app"></i> <!--Icono de Fon awesome (Cash application)-->
+                    <span>Ventas</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-static"> <!--Lista3-->
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-box-open"></i> <!--Icono de Fon awesome (Open box)-->
+                    <span>Inventario</span>
+                </a>
+            </li>
+        </div>
+
+        <div class="menu-group"><!--2 Grupo-->
+        <span class="group-title">Análisis</span>
+            <li class="menu-item menu-item-static"> <!--lista4-->
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-chart-line"></i> <!--Icono de Fon awesome (Reports)-->
+                    <span>Reportes</span>
+                </a>
+            </li> 
+        </div>
+        
+        <div class="menu-group"><!--3 Grupo-->
+        <span class="group-title">Administración</span>
+            <li class="menu-item menu-item-static"><!--Lista5-->
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-user-gear"></i> <!--Icono de Fon awesome (User gear)-->
+                    <span>Usuarios</span> 
+                </a>
+            </li> 
+
+            <li class="menu-item menu-item-static"><!--Lista6-->
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-truck"></i> <!--Icono de Fon awesome (Truck)-->
+                    <span>Proveedores</span>
+                </a>
+            </li>   
+
+            <li class="menu-item menu-item-static"><!--Lista7-->
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-gear"></i> <!--Icono de Fon awesome (Settings)-->
+                    <span>Ajustes</span>
+                </a>
+            </li>
+        </div>
+            
+        <!--Codigo de separacion- Empuja hacia el area de abajo-->
+        <div class="menu-group footer-menu">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span>Mi Perfil</span>
+                    </a>
+                </li>
+                <li class="menu-item logout">
+                    <a href="#" class="menu-link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Cerrar Sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </ul><!--1.1 Fin del contenedor del menu (SE TE OLVIDO CERRAR EL UL 1/01/2026)-->  <!-- Fin (menu con los inconos)-->            
+    </nav>
+</aside>
+<!--2.3 Fin del SIDEBAR-->
+
+<!--2.2 TOP NAVBAR/(Menu de Arriba)- TAREA: TOP NAVBAR para el Dasboard PERFIL DE USUARIO 12/01/2026-->
+    <section class="main-view"> <!-- main-view es la que genera ese fondo gris.-->
+        <header class="top-navbar">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i> <!--Icono de Fon awesome (magnifying-glass)-->
+                <input type="text" placeholder="Buscar en el sistema...">
+            </div>
+
+            <div class="header-actions">
+                <div class="notifications-icon">
+                    <i class="fa-solid fa-bell"></i> <!--Icono de Fon awesome (bell)-->
+                    <span class="dot"></span>
+                </div>
+
+                <div class="user-profile">
+                    <div class="profile-text">
+                        <span class="user-name">Super-Admin</span>
+                        <span class="user-status">En línea</span>
+                    </div>
+                    <div class="profile-avatar">
+                        <img src="/img/Logo1.png" alt="Perfil">
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i> <!--Icono de Fon awesome (chevron down)-->
+                </div>
+            </div>
+        </header>
+
+        <!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
+        <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->
+            <!-- Editar productos-->
+            <div class="edit-user-container"> <!-- Contenedor del editor de usuarios-->
+                <h2>Editar productos</h2>
+                <form action="" method="post" class="edit-user-form"> <!-- Formulario para editar productos-->
+                    <div class="form-group">
+                        <label for="">Proveedores</label>
+                        <input type="text" id="" name="">
+                    </div>
+                    <button type="submit" class="btn-submit">Guardar Cambios</button>
+                </form>
+
+        </div>
+    </section> 
+
+</body>
+</html>

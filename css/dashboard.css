@@ -1,3 +1,4 @@
+
 /*Capitulo 2: Codigo del Dashboard - Dividido en dos partes (Parte 1)*/
 /* --- TOP NAVBAR - Parte 001:Top Navbar--- */
 
@@ -154,24 +155,38 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } /*Fin de esta parte del codigo*/
 
-/* 1. Contenedor principal del Logo */
-.logo {
-    padding: 1.5rem 1rem; /* Más aire arriba y a los lados */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Línea sutil divisoria */
-    /* Alinea el icono del boton */
-    display: flex;             /* Activa Flexbox */
-    align-items: center;       /* Alinea verticalmente al centro */
-    justify-content: space-between; /* Empuja el texto a la izquierda y el botón a la derecha */
 
+
+
+
+.logo {
+    display: flex;
+    align-items: center;    /* Alinea verticalmente al centro el logo y el botón */
+    justify-content: space-between; /* NUEVO: Empuja el logo a la izquierda y el botón a la derecha */
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    gap: 15px;              /* Espacio de seguridad entre elementos */
 }
-/* Tipografía */
-.logo-text {
+
+.logo .img {
+    width: 160px;        /* Tamaño del logo */   
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;         /* Evita que el logo se haga pequeño si falta espacio */
+}
+
+/* El botón de hamburguesa fijo a la derecha */
+.menu-btn {
     color: #ffffff;
-    font-size: 1.15rem;   /* Un poco más grande */
-    font-weight: 700;     /* Más grosor para impacto */
-    letter-spacing: -0.5px; /* Estilo de diseño moderno */
-    font-family: 'Inter', 'Segoe UI', sans-serif; /* Tipografías limpias */
-} 
+    cursor: pointer;
+    font-size: 1.4rem; 
+    display: flex;          /* Asegura que el icono dentro esté centrado */
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
 
 /* Estilo del Botón de maximizar/minimizar */
 .menu-btn {
@@ -342,16 +357,19 @@
     transform: rotate(180deg);
 } /*Fin de esta parte del codigo*/
 
+
 /* 11. Sidebar colapsado (minimizado) */
 .sidebar.collapsed {
     width: 80px; /* Ancho pequeño solo para iconos */
 }
-/* Ocultar el texto del logo y de los menús */
+
+/* Ocultar el texto del logo, la IMAGEN del logo y el resto de elementos */
+.sidebar.collapsed .logo .img,     /* <--- NUEVO: Oculta la imagen del logo */
 .sidebar.collapsed .logo-text,
 .sidebar.collapsed .menu-link span,
 .sidebar.collapsed .group-title,
 .sidebar.collapsed .fa-angle-down {
-    display: none;
+    display: none; /* Desaparecen completamente del flujo del diseño */
 }
 
 /* Centrar los iconos cuando está colapsado */
@@ -365,10 +383,11 @@
     font-size: 1.3rem;
 }
 
-/* Ajustar el logo cuando está colapsado */
+/* Ajustar el contenedor del logo cuando está colapsado */
 .sidebar.collapsed .logo {
-    justify-content: center;
+    justify-content: center; /* Centra el único elemento restante (el botón de menú) */
     padding: 1.5rem 0;
+    gap: 0;                  /* Elimina el espacio que había entre imagen y botón */
 } /* Fin del codigo */
 
 /* Ajuste para que se desplace en el colapso tanto para el .main-view como .top-navbar para el dasboard*/
@@ -379,10 +398,9 @@
 .sidebar.collapsed ~ .main-view .top-navbar {
     left: 80px;
     width: calc(100% - 80px);
-}/* Fin del codigo */
+}
 
-/* ransición sea fluida y que el texto no aparezca "encimado" para el dasboard*/
-
+/* Transición sea fluida y que el texto no aparezca "encimado" para el dasboard*/
 .sidebar.collapsed .menu-item-dropdownc .menu-dropdown {
     display: none; /* Evita que el submenú se despliegue mientras el sidebar es pequeño */
 }
@@ -390,13 +408,84 @@
 .sidebar:not(.collapsed) .menu-item-dropdownc.open .menu-dropdown {
     display: block;
     max-height: 500px; /* O el valor que ya tenías */
-}/* Fin del codigo */
-
+} /* Fin del codigo */
 
 /* Capitulo 3: Tablas - 14/01/2026* 16/01/2026*/
 /* parte 01: Tabla de ventas*/
 
-/* 1.1 Tabla de ventas*/
+
+
+
+/* Capitulo 3: Tablas - 14/01/2026* 16/01/2026*/
+/* parte 01: Ejemplo de filtrado*/
+
+/* 1.1 filtrado*/
+
+/* Contenedor principal del filtro ADAPTADO */
+.filter-container {
+    background: #ffffff;
+    padding: 1.5rem;
+    /* ADAPTACIÓN: Quitamos el redondeado de abajo y el margen para que se pegue a la tabla */
+    border-radius: 8px 8px 0 0; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0; /* ADAPTACIÓN: Eliminamos el espacio con la tabla */
+    border: 1px solid #e5e7eb;
+    border-bottom: none; /* ADAPTACIÓN: Quitamos el borde inferior para que no se vea una línea doble */
+}
+
+/* Formulario en línea */
+.filter-form {
+    display: flex;
+    align-items: flex-end; /* Alinea los inputs en la base */
+    gap: 20px;             /* Espacio entre Categoria y Nombre */
+    flex-wrap: wrap;       /* Responsivo: baja los elementos si no hay espacio */
+}
+
+/* Grupos de Input (Label + Campo) */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;              /* Espacio entre el texto y la caja */
+    flex: 1;               /* Distribución equitativa del ancho */
+    min-width: 200px;      /* Evita que se colapsen demasiado */
+}
+
+/* Estilo de las etiquetas (Labels) */
+.input-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4b5563;        /* Gris oscuro profesional */
+    text-transform: none;  /* Mantiene el texto como lo escribiste */
+}
+
+/* Estilo para Inputs y Selects */
+.input-group input, 
+.input-group select {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #1f2937;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto al hacer clic o focus */
+.input-group input:focus, 
+.input-group select:focus {
+    border-color: #3b82f6; 
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Ajuste específico para el placeholder */
+.input-group input::placeholder {
+    color: #9ca3af;
+    font-size: 0.85rem;
+}/* Fin dle codigo*/
+
+
+/* 1.1 Tablas*/
 /* Contenedor tipo tarjeta */
 .card-table {
     background: #ffffff;
@@ -536,5 +625,129 @@ table tbody td {
 .btn-icon:hover {
     transform: translateY(-2px);
     filter: brightness(0.9);
+}
+/* Fin del codigo */
+
+
+/* Capitulo 4: HOME  DASHBOARD Home*/
+/* Parte 1- Estructura de tarjetas */
+/* Contenedor Principal */
+.main-content {
+    background-color: #f4f6f9; 
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* Grid de Tarjetas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #fdfcfc; /*Color de las cajas de los iconos*/
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Iconos */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: white; /*Colores de los iconos*/
+    font-size: 24px;
+}
+
+.bg-green { background-color: #69e27e; } /* Icono de ventas */
+.bg-purple { background-color: #cd0c36; } /* Icono de inventario */
+.bg-orange { background-color: #e07c18; } /* Icono de proveedores */
+.bg-blue   { background-color: #115e81; } /* Icono de usuarios */
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; /* Color de los numeros */
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #474646; /* Color de las etiquetas */
+    text-transform: uppercase;
+}
+
+/* Footer de Tarjeta */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #0f172a; /* color de fondo de la tarjeta */
+    border-top: 1px solid #334155; 
+    text-decoration: none;
+    color: #fdfcfc; /* color de las letras de la tarjeta */
+    font-size: 12px;
+    transition: background 0.2s;
+}
+
+.card-footer:hover {
+    background: #334155; /* color de fondo de la tarjeta al pasar el mouse */
+}
+
+/* Parte 2-  */
+/* Sección de Alertas */
+.alert-section {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.alert-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+    color: #181a19; /* Color verde agua de la imagen */
+    font-weight: 500;
+}
+
+.alert-content {
+    padding: 25px 15px;
+}
+
+.alert-content h2 {
+    font-size: 32px;
+    color: #444;
+    margin: 0 0 10px 0;
+}
+
+.alert-content p {
+    color: #777;
+    font-size: 14px;
 }
 /* Fin del codigo */

@@ -1,0 +1,360 @@
+<!DOCTYPE html> <!-- Dasboar completo - SuperAdministrador.-->
+<html lang="es"> <!-- <html> etiqueta raíz de toda la página HTML.-->
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/Logo2.ico"> <!--Link del Favicon de la aplicacion--> 
+    <link rel="stylesheet" href="/css/dashboard.css"> <!-- Enlace al archivo CSS externo -->
+    <script src="/js/script.js"></script><!-- Enlazar JavaScript con hojas HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
+	<title>Dashboard - SuperAdministrador</title> <!-- DASHBOARD DE HOBBIES PLACE-->
+</head> 
+<body>
+<div class="dashboard-wrapper"> <!-- Contenedor principal del Dashboard-->
+<!--2.3 SIDEBAR/(Menu lateral)- TAREA: siderbar para el Dasboard menu responsibo y que se oculta.--> 
+<aside class="sidebar"> <!-- Parte 001: Contenedor de la barra lateral del siderbar-->
+        <!-- Logo dentro del sidebar -->
+        <div class="logo"> <!--Contenedor del logo--> 
+            <img class="img" src="/img/Logo2.png" alt="Logo de Hobbies Place"/> <!--Logo de Hobbies Place (Logo) -->
+            <!-- Boton para maximizar y minizar el sidebar-->
+            <div class="menu-btn"> <!--Contenedor del boton-->
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+        </div>
+    <!-- Parte 002: Menú dentro del sidebar-->
+    <nav class="Menu-siderbar"> <!--Contenedor del Menu-siderbar-->
+        <div class="menu-group"><!--1 Grupo-->
+        <span class="group-title">Operativa</span>
+        <ul class="menu"> <!--1.1 Contenedor del menu-->
+            <li class="menu-item menu-item-static"> <!--Lista1 Menu estatico que no se despliega-->
+                <a href="#" class="menu-link">           <!--Redireccion--> 
+                    <i class="fa-solid fa-house"></i>    <!--Icono de Fon awesome (hause)-->
+                    <span>Inicio</span>                  <!--nombre del icono en un spam--> <!--Esto es ivoculcrao para ir a la vista del Home-->
+                </a>
+            </li>
+            <li class="menu-item menu-item-static"><!--Lista2-->
+                <a href="#" class="menu-link">
+                    <i class="fa-brands fa-cash-app"></i> <!--Icono de Fon awesome (Cash application)-->
+                    <span>Ventas</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-static"> <!--Lista3-->
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-box-open"></i> <!--Icono de Fon awesome (Open box)-->
+                    <span>Inventario</span>
+                </a>
+            </li>
+        </div>
+
+        <div class="menu-group"><!--2 Grupo-->
+        <span class="group-title">Análisis</span>
+            <li class="menu-item menu-item-static"> <!--lista4-->
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-chart-line"></i> <!--Icono de Fon awesome (Reports)-->
+                    <span>Reportes</span>
+                </a>
+            </li> 
+        </div>
+        
+        <div class="menu-group"><!--3 Grupo-->
+        <span class="group-title">Administración</span>
+            <li class="menu-item menu-item-static"><!--Lista5-->
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-user-gear"></i> <!--Icono de Fon awesome (User gear)-->
+                    <span>Usuarios</span> 
+                </a>
+            </li> 
+
+            <li class="menu-item menu-item-static"><!--Lista6-->
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-truck"></i> <!--Icono de Fon awesome (Truck)-->
+                    <span>Proveedores</span>
+                </a>
+            </li>   
+
+            <li class="menu-item menu-item-static"><!--Lista7-->
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-gear"></i> <!--Icono de Fon awesome (Settings)-->
+                    <span>Ajustes</span>
+                </a>
+            </li>
+        </div>
+            
+        <!--Codigo de separacion- Empuja hacia el area de abajo-->
+        <div class="menu-group footer-menu">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span>Mi Perfil</span>
+                    </a>
+                </li>
+                <li class="menu-item logout">
+                    <a href="#" class="menu-link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Cerrar Sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </ul><!--1.1 Fin del contenedor del menu (SE TE OLVIDO CERRAR EL UL 1/01/2026)-->  <!-- Fin (menu con los inconos)-->            
+    </nav>
+</aside>
+<!--2.3 Fin del SIDEBAR-->
+
+<!--2.2 TOP NAVBAR/(Menu de Arriba)- TAREA: TOP NAVBAR para el Dasboard PERFIL DE USUARIO 12/01/2026-->
+    <section class="main-view"> <!-- main-view es la que genera ese fondo gris.-->
+        <header class="top-navbar">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i> <!--Icono de Fon awesome (magnifying-glass)-->
+                <input type="text" placeholder="Buscar en el sistema...">
+            </div>
+
+            <div class="header-actions">
+                <div class="notifications-icon">
+                    <i class="fa-solid fa-bell"></i> <!--Icono de Fon awesome (bell)-->
+                    <span class="dot"></span>
+                </div>
+
+                <div class="user-profile">
+                    <div class="profile-text">
+                        <span class="user-name">Super-Admin</span>
+                        <span class="user-status">En línea</span>
+                    </div>
+                    <div class="profile-avatar">
+                        <img src="/img/Logo1.png" alt="Perfil">
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i> <!--Icono de Fon awesome (chevron down)-->
+                </div>
+            </div>
+        </header>
+        <!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
+        <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->      
+        
+        <!-- Reporte de ventas -->
+<div class="report-container">
+        <!-- Encabezado del reporte -->
+        <div class="report-header">
+            <div class="company-name">SISTEMA DE INVENTARIO CORPORATIVO</div>
+            <div class="report-title">REPORTE DE INVENTARIO</div>
+            <div style="font-size: 14px; color: #666;">Reporte generado automáticamente por el sistema</div>
+        </div>
+        
+        <!-- Información del reporte -->
+        <table class="report-info">
+            <tr>
+                <td class="info-label">Fecha de generación:</td>
+                <td>15/10/2023</td>
+                <td class="info-label">Período cubierto:</td>
+                <td>01/10/2023 - 15/10/2023</td>
+            </tr>
+            <tr>
+                <td class="info-label">Código de reporte:</td>
+                <td>INV-2023-10-15-001</td>
+                <td class="info-label">Generado por:</td>
+                <td>Administrador Principal</td>
+            </tr>
+            <tr>
+                <td class="info-label">Departamento:</td>
+                <td>Logística y Almacén</td>
+                <td class="info-label">Estado:</td>
+                <td>Finalizado</td>
+            </tr>
+        </table>
+        
+        <!-- Resumen ejecutivo -->
+        <div class="executive-summary">
+            <h3 style="color: #1976d2; margin-bottom: 15px;">RESUMEN EJECUTIVO</h3>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="summary-value">1,247</div>
+                    <div class="summary-label">Total de productos</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">$547,890.25</div>
+                    <div class="summary-label">Valor total inventario</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">23</div>
+                    <div class="summary-label">Productos con stock bajo</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">12</div>
+                    <div class="summary-label">Productos obsoletos</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">3.2</div>
+                    <div class="summary-label">Índice de rotación</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">97.8%</div>
+                    <div class="summary-label">Nivel de servicio</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tabla principal de inventario -->
+        <h3 style="color: #1976d2; margin: 25px 0 10px;">DETALLE DE INVENTARIO</h3>
+        <table class="inventory-table">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Categoría</th>
+                    <th>Stock Actual</th>
+                    <th>Stock Mín</th>
+                    <th>Stock Máx</th>
+                    <th>Estado</th>
+                    <th>Valor Unit.</th>
+                    <th>Valor Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PROD-001</td>
+                    <td>Laptop Dell XPS 15</td>
+                    <td>Electrónica</td>
+                    <td>45</td>
+                    <td>10</td>
+                    <td>100</td>
+                    <td class="status-normal">Normal</td>
+                    <td>$1,250.00</td>
+                    <td>$56,250.00</td>
+                </tr>
+                <tr>
+                    <td>PROD-002</td>
+                    <td>Mouse Inalámbrico Logitech</td>
+                    <td>Accesorios</td>
+                    <td>120</td>
+                    <td>50</td>
+                    <td>300</td>
+                    <td class="status-normal">Normal</td>
+                    <td>$25.00</td>
+                    <td>$3,000.00</td>
+                </tr>
+                <tr>
+                    <td>PROD-003</td>
+                    <td>Monitor 24" Samsung</td>
+                    <td>Electrónica</td>
+                    <td>12</td>
+                    <td>15</td>
+                    <td>50</td>
+                    <td class="status-critical">STOCK BAJO</td>
+                    <td>$320.00</td>
+                    <td>$3,840.00</td>
+                </tr>
+                <tr>
+                    <td>PROD-004</td>
+                    <td>Teclado Mecánico</td>
+                    <td>Accesorios</td>
+                    <td>87</td>
+                    <td>30</td>
+                    <td>150</td>
+                    <td class="status-normal">Normal</td>
+                    <td>$85.00</td>
+                    <td>$7,395.00</td>
+                </tr>
+                <tr>
+                    <td>PROD-005</td>
+                    <td>Impresora HP LaserJet</td>
+                    <td>Oficina</td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>25</td>
+                    <td class="status-low">STOCK BAJO</td>
+                    <td>$450.00</td>
+                    <td>$3,600.00</td>
+                </tr>
+                <tr>
+                    <td>PROD-006</td>
+                    <td>Silla Ergonómica</td>
+                    <td>Mobiliario</td>
+                    <td>22</td>
+                    <td>10</td>
+                    <td>40</td>
+                    <td class="status-normal">Normal</td>
+                    <td>$289.00</td>
+                    <td>$6,358.00</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Totales -->
+        <div class="totals">
+            <div class="total-row">
+                <span style="font-weight: bold;">SUBTOTAL:</span> 
+                <span style="margin-left: 20px;">$ 547,890.25</span>
+            </div>
+            <div class="total-row">
+                <span>IVA (16%):</span> 
+                <span style="margin-left: 20px;">$ 87,662.44</span>
+            </div>
+            <div class="total-row grand-total">
+                <span>TOTAL GENERAL:</span> 
+                <span style="margin-left: 20px;">$ 635,552.69</span>
+            </div>
+        </div>
+        
+        <!-- Sección de alertas -->
+        <div class="alerts-section">
+            <div class="alerts-header">⚠ ALERTAS Y NOTIFICACIONES</div>
+            <div class="alert-item alert-critical">
+                <strong>ALERTAS CRÍTICAS (3)</strong><br>
+                - PROD-003: Stock por debajo del mínimo (12/15 unidades)<br>
+                - PROD-005: Stock por debajo del mínimo (8/5 unidades)<br>
+                - PROD-012: Producto próximo a vencimiento (30 días)
+            </div>
+            <div class="alert-item">
+                <strong>ALERTAS MEDIAS (7)</strong><br>
+                - PROD-008: Stock al 30% de capacidad<br>
+                - PROD-015: Rotación baja (menos de 1 movimiento/mes)
+            </div>
+        </div>
+        
+        <!-- Firmas -->
+        <div class="signatures">
+            <div class="signature-block">
+                <div>Generado por:</div>
+                <div style="margin-top: 5px; font-weight: bold;">Administrador de Inventario</div>
+                <div class="signature-line"></div>
+                <div style="margin-top: 5px; font-size: 14px;">Firma</div>
+                <div style="margin-top: 10px;">Fecha: ______/______/________</div>
+            </div>
+            <div class="signature-block">
+                <div>Revisado por:</div>
+                <div style="margin-top: 5px; font-weight: bold;">Jefe de Departamento</div>
+                <div class="signature-line"></div>
+                <div style="margin-top: 5px; font-size: 14px;">Firma</div>
+                <div style="margin-top: 10px;">Fecha: ______/______/________</div>
+            </div>
+        </div>
+        
+        <!-- Notas adicionales -->
+        <div class="notes">
+            <h4 style="color: #333; margin-bottom: 10px;">NOTAS ADICIONALES</h4>
+            <ol>
+                <li>Los productos marcados como "STOCK BAJO" requieren reabastecimiento inmediato.</li>
+                <li>El índice de rotación se calcula considerando ventas de los últimos 90 días.</li>
+                <li>Este reporte es confidencial y para uso interno de la empresa.</li>
+                <li>Valores expresados en dólares estadounidenses (USD).</li>
+                <li>Reporte generado automáticamente por el Sistema de Inventario Corporativo v3.2.</li>
+            </ol>
+        </div>
+        
+        <!-- Footer -->
+        <div class="report-footer">
+            Página 1 de 1 | Reporte generado el 15/10/2023 14:30:25 | Sistema de Inventario Corporativo © 2023
+        </div>
+    </div>
+
+        <div><!-- Fin del contenedor-->
+
+
+
+
+    </section> 
+</div> <!-- fin del Contenedor principal del Dashboard-->
+
+
+</body>
+</html>

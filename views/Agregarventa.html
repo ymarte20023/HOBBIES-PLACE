@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- Dasboar completo - SuperAdministrador.-->
+<!DOCTYPE html> <!-- Dasboar completo - SuperAdministrador (Agregar porductos)-->
 <html lang="es"> <!-- <html> etiqueta raíz de toda la página HTML.-->
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/dashboard.css"> <!-- Enlace al archivo CSS externo -->
     <script src="/js/script.js"></script><!-- Enlazar JavaScript con hojas HTML -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
-	<title>Ventas</title> <!-- DASHBOARD DE HOBBIES PLACE-->
+	<title>Agregar Ventas </title> <!-- DASHBOARD DE HOBBIES PLACE-->
 </head> 
 <body>
 <div class="dashboard-wrapper"> <!-- Contenedor principal del Dashboard-->
@@ -102,7 +102,6 @@
 </aside>
 <!--2.3 Fin del SIDEBAR-->
 
-
 <!--2.2 TOP NAVBAR/(Menu de Arriba)- TAREA: TOP NAVBAR para el Dasboard PERFIL DE USUARIO 12/01/2026-->
     <section class="main-view"> <!-- main-view es la que genera ese fondo gris.-->
         <header class="top-navbar">
@@ -129,9 +128,10 @@
                 </div>
             </div>
         </header>
-        <!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
+        
+<!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
         <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->
-        <!-- tabla de ventas -->
+        <!-- Tabla de ventas metida hacia atras asi no oscutaliza la vista de agregar.-->
             <div class="card-table">
                 <div class="table-header">
                     <div class="header-title">
@@ -273,10 +273,65 @@
                         </tbody>
                     </table> <!--Fin de la tabla -->
                 </div>
-            </div> <!-- Fin del codigo-->  
+        <!-- Fin del codigo-->
+        <!-- Agregar nueva venta -->
+            <div id="modalVenta" class="modal-container"> <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-cart-plus"></i> Registrar Nuevo Pedido</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+
+                <form class="modal-form">
+                    <div class="form-grid">
+                        <div class="form-section">
+                            <h4>Datos del Cliente</h4>
+                            <div class="input-group">
+                                <label for="cliente-nombre">Nombre Completo</label>
+                                <input type="text" id="cliente-nombre" placeholder="Ej: Carlos Ruiz" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="cliente-cedula">Cédula / RIF</label>
+                                <input type="text" id="cliente-cedula" placeholder="Ej: V-12.345.678" required>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4>Detalles del Producto</h4>
+                            <div class="input-group">
+                                <label for="producto-select">Seleccionar Producto</label>
+                                <select id="producto-select" required>
+                                    <option value="" disabled selected>Buscar producto en inventario...</option>
+                                    <option value="1">Flexxfolio 480 24-Pocket – Red</option>
+                                    <option value="2">Flexxfolio 360 18-Pocket – Blue</option>
+                                    <option value="3">FlipTray 80+ Xenoskin – Blue</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="venta-unidades">Unidades</label>
+                                    <input type="number" id="venta-unidades" min="1" value="1" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="venta-precio">Precio Unitario (Bs)</label>
+                                    <input type="text" id="venta-precio" placeholder="0,00" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <div class="total-display">
+                            <span>Total a Pagar:</span>
+                            <strong id="total-bs">0,00 Bs</strong>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary">Cancelar</button>
+                            <button type="submit" class="btn-main-action">Finalizar Venta</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section> 
-</div> <!-- fin del Contenedor principal del Dashboard-->
-
 </body>
 </html>

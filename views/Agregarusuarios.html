@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- Dasboar completo - SuperAdministrador.-->
+<!DOCTYPE html> <!-- Dasboar completo - SuperAdministrador (Agregar porductos)-->
 <html lang="es"> <!-- <html> etiqueta raíz de toda la página HTML.-->
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/dashboard.css"> <!-- Enlace al archivo CSS externo -->
     <script src="/js/script.js"></script><!-- Enlazar JavaScript con hojas HTML -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
-	<title>Ventas</title> <!-- DASHBOARD DE HOBBIES PLACE-->
+	<title>Agregar usuario</title> <!-- DASHBOARD DE HOBBIES PLACE-->
 </head> 
 <body>
 <div class="dashboard-wrapper"> <!-- Contenedor principal del Dashboard-->
@@ -102,7 +102,6 @@
 </aside>
 <!--2.3 Fin del SIDEBAR-->
 
-
 <!--2.2 TOP NAVBAR/(Menu de Arriba)- TAREA: TOP NAVBAR para el Dasboard PERFIL DE USUARIO 12/01/2026-->
     <section class="main-view"> <!-- main-view es la que genera ese fondo gris.-->
         <header class="top-navbar">
@@ -129,41 +128,37 @@
                 </div>
             </div>
         </header>
+
         <!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
         <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->
-        <!-- tabla de ventas -->
+            <!-- Tabla de usuarios metida hacia atras asi no oscutaliza la vista de agregar.-->
             <div class="card-table">
                 <div class="table-header">
                     <div class="header-title">
                         <!--filtrado -->
                         <form class="filter-form">
                             <div class="input-group">
-                                <label for="buscar-pedido">ID o Cliente</label>
-                                <input type="text" id="buscar-pedido" placeholder="Ej: PED-1024 o Carlos">
+                                <label for="nombre">Usuario</label>
+                                <input type="text" id="nombre" placeholder="Insertar Nombre del Usuario">
                             </div>
                             <div class="input-group">
-                                <label for="filtro-fecha">Fecha</label>
-                                <input type="date" id="filtro-fecha">
+                                <label for="clave">Clave</label>
+                                <input type="text" id="clave" placeholder="Insertar Clave del Usuario">
                             </div>
-                            <div class="input-group">   <label for="tipo-categoria">Categoría</label>
-                                <select id="tipo-categoria">      <option value="" disabled selected>Seleccione...</option>
-                                    <option value="accesorios">Accesorios</option>
-                                    <option value="cartas">Cartas</option>
-                                    <option value="juegos-mesa">Juegos de mesa</option>
-                                </select>
-                            </div>
-                            <div class="input-group">   <label for="filtro-estado">Estado</label>
-                                <select id="filtro-estado">
-                                    <option value="todos">Todos</option>
-                                    <option value="entregado">Entregado</option>
-                                    <option value="pendiente">Pendiente</option>
+                            <div class="input-group">   <!-- Categoria -->
+                                <label for="tipo">Rol</label>
+                                <select id="tipo">      <!-- Select con opciones -->
+                                    <option value="routers">Super-Administrador</option>
+                                    <option value="antenas">Administrador</option>
+                                    <option value="sublimables">Usuario</option>
                                 </select>
                             </div>
                         </form>
                     </div>
-                    <!-- Agregar ventas -->
+
+                    <!-- Agregar usuarios -->
                     <a href="#" class="btn-main-action" style="text-decoration: none;">
-                        <i class="fas fa-cart-plus"></i> Registrar Pedido
+                        <i class="fas fa-user-plus"></i> Agregar Usuario
                     </a>
                 </div>
 
@@ -172,111 +167,140 @@
                         <thead> <!-- Encabezado de la tabla -->
                             <tr>
                                 <th>ID</th>
-                                <th>Producto / Cliente</th>
-                                <th>Cedula</th>
-                                <th>Unidades</th>
-                                <th>Total</th>
-                                <th>Fecha</th>
+                                <th>Nombre Completo</th>
+                                <th>Rol</th>
+                                <th>Correo Electrónico</th>
                                 <th>Estado</th>
                                 <th>Acciones</th>
                             </tr>
-                        </thead> <!-- Fin del encabezado de la tabla --> 
-                        <tbody> <!-- cuerpo principal de los datos/F1 -->
+                        </thead> <!-- Fin del encabezado de la tabla -->
+
+                        <tbody><!-- F1 -->
                             <tr>
                                 <td><strong>#001</strong></td>
                                 <td>
                                     <div style="display: flex; flex-direction: column;">
-                                        <span style="font-weight: 600;">Flexxfolio 480 24-Pocket – Red</span>
-                                        <small style="color: #64748b;">Cliente: Carlos Ruiz</small>
+                                        <span style="font-weight: 600;">Edgar Reyes</span>
+                                        <small style="color: #64748b;">Última conexión: Hoy</small>
                                     </div>
                                 </td>
-                                <td>V-12.345.678</td>
-                                <td>1</td>
-                                <td><strong>16.290,75 Bs</strong></td>
-                                <td>16/01/2026</td>
-                                <td><span class="status-pill status-success">Entregado</span></td>
-                                <td> <!-- Botones para editar y eliminar ventas-->
+                                <td><span class="role-badge"> <strong>Super Administrador</strong></span></td>
+                                <td>hobbiesplacevzla@gmail.com</td>
+                                <td><span class="status-pill status-success">Activo</span></td>
+                                <td> <!-- Botones para editar y eliminar -->
                                     <div class="action-buttons">
-                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
-                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>
-                        </tbody><!-- Fin del cuerpo principal de los datos -->
+                        </tbody>
 
-                        <tbody><!--F2 -->
+                        <tbody><!-- F2 -->
                             <tr>
                                 <td><strong>#002</strong></td>
                                 <td>
                                     <div style="display: flex; flex-direction: column;">
-                                        <span style="font-weight: 600;">Flexxfolio 360 18-Pocket – Blue</span>
-                                        <small style="color: #64748b;">Cliente: Ana Martínez</small>
+                                        <span style="font-weight: 600;">Daniel Reyes</span>
+                                        <small style="color: #64748b;">Última conexión: Ayer</small>
                                     </div>
                                 </td>
-                                <td>V-23.456.789</td>
-                                <td>1</td>
-                                <td><strong>16.290,75 Bs</strong></td>
-                                <td>15/01/2026</td>
-                                <td><span class="status-pill status-pending">Pendiente</span></td>
-                                <td> <!-- Botones para editar y eliminar ventas-->
+                                <td><span class="role-badge"> <strong>Administrador secundario</strong></span></td>
+                                <td>DanielReyes@email.com</td>
+                                <td><span class="status-pill status-success">Activo</span></td>
+                                <td> <!-- Botones para editar y eliminar -->
                                     <div class="action-buttons">
-                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
-                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
 
-                        <tbody> <!--F3 -->
+                        <tbody> <!-- F3 -->
                             <tr>
                                 <td><strong>#003</strong></td>
                                 <td>
                                     <div style="display: flex; flex-direction: column;">
-                                        <span style="font-weight: 600;">FlipTray 80+ Xenoskin – Blue</span>
-                                        <small style="color: #64748b;">Cliente: Carlos Aguiar</small>
+                                        <span style="font-weight: 600;">Salvador Torres</span>
+                                        <small style="color: #64748b;">Última conexión: Hoy</small>
                                     </div>
                                 </td>
-                                <td>V-34.567.890</td>
-                                <td>1</td>
-                                <td><strong>18.618,00 Bs</strong></td>
-                                <td>15/01/2026</td>
-                                <td><span class="status-pill status-success">Entregado</span></td>
-                                <td> <!-- Botones para editar y eliminar ventas-->
+                                <td><span class="role-badge"> <strong>Usuario</strong></span></td>
+                                <td>SalvadorTorrez@email.com</td>
+                                <td><span class="status-pill status-danger">Inactivo</span></td>
+                                <td><!-- Botones para editar y eliminar -->
                                     <div class="action-buttons">
-                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
-                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
-                        <tbody> <!--F4 -->
-                            <tr>
-                                <td><strong>#004</strong></td>
-                                <td>
-                                    <div style="display: flex; flex-direction: column;">
-                                        <span style="font-weight: 600;">Sidewinder 100+ Xenoskin – Green</span>
-                                        <small style="color: #64748b;">Cliente: Daniel Parra</small>
-                                    </div>
-                                </td>
-                                <td>V-45.678.901</td>
-                                <td>1</td>
-                                <td><strong>18.618,00 Bs</strong></td>
-                                <td>15/01/2026</td>
-                                <td><span class="status-pill status-pending">Pendiente</span></td>
-                                <td><!-- Botones para editar y eliminar ventas-->
-                                    <div class="action-buttons">
-                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
-                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table> <!--Fin de la tabla -->
+                    </table> <!-- Fin de la tabla completa -->
                 </div>
-            </div> <!-- Fin del codigo-->  
+            <!-- Fin del codigo-->
+
+        <!-- Agregar Usuarios-->
+        <div id="modalUsuario" class="modal-container"> 
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-user-plus"></i> Registrar Nuevo Usuario</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+
+                <form class="modal-form">
+                    <div class="form-grid">
+                        <div class="form-section">
+                            <h4>Información Personal</h4>
+                            <div class="input-group">
+                                <label for="user-fullname">Nombre Completo</label>
+                                <input type="text" id="user-fullname" placeholder="Ej: Edgar Reyes" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="user-email">Correo Electrónico</label>
+                                <input type="email" id="user-email" placeholder="nombre@hobbiesplace.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4>Seguridad y Acceso</h4>
+                            <div class="input-group">
+                                <label for="user-role">Asignar Rol</label>
+                                <select id="user-role" required>
+                                    <option value="" disabled selected>Seleccione un rol...</option>
+                                    <option value="super-admin">Super-Administrador</option>
+                                    <option value="admin">Administrador</option>
+                                    <option value="usuario">Usuario Estándar</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="user-pass">Contraseña</label>
+                                    <input type="password" id="user-pass" placeholder="••••••••" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="user-confirm">Confirmar</label>
+                                    <input type="password" id="user-confirm" placeholder="••••••••" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <div class="status-info">
+                            <p style="font-size: 0.85rem; color: #64748b;">
+                                <i class="fas fa-info-circle"></i> El usuario recibirá un correo de activación.
+                            </p>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary">Cancelar</button>
+                            <button type="submit" class="btn-main-action">Crear Usuario</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section> 
-</div> <!-- fin del Contenedor principal del Dashboard-->
-
 </body>
 </html>

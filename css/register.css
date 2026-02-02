@@ -34,7 +34,7 @@ body:has(.container) { /*Contenedor general del login y register*/
     display: flex;
     border-radius: 20px;
     overflow: hidden; /* Para que la imagen respete el borde redondeado */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 } /*Fin de esta parte del codigo*/
 
 .container form div { /* Conservar Codigo */
@@ -121,7 +121,7 @@ input[type="password"] {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.438);
 }/*Fin de esta parte del codigo*/
 
 /* RESPONSIVO PARA MÓVILES - Parte 005*/
