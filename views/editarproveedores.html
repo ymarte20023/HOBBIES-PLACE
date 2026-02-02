@@ -131,8 +131,168 @@
 
         <!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
         <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->
-            <!-- Editar productos-->
+
+            <!--Tabla de proveedores metida hacia atras asi no oscutaliza la vista de agregar.-->
+            <div class="card-table">
+            <div class="table-header">
+                <div class="header-title">
+                    <!--filtrado -->
+                        <form class="filter-form">
+                            <div class="input-group">
+                                <label for="nombre-empresa">Nombre de Empresa</label>
+                                <input type="text" id="nombre-empresa" placeholder="Insertar nombre de la empresa">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="contacto">Contacto</label>
+                                <input type="text" id="contacto" placeholder="Insertar Correo o Teléfono">
+                            </div>
+
+                            <div class="input-group"> <!-- Categoria -->
+                                <label for="categoria-suministro">Categoría</label>
+                                <select id="categoria-suministro"><!-- Select con opciones -->
+                                    <option value="" disabled selected>Seleccione...</option>
+                                    <option value="cartas">Cartas</option>
+                                    <option value="accesorios">Accesorios</option>
+                                    <option value="juegos-mesa">Juegos de Mesa</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="estado-proveedor">Estado</label>
+                                <select id="estado-proveedor">
+                                    <option value="" disabled selected>Seleccione...</option>
+                                    <option value="activo">Activo</option>
+                                    <option value="inactivo">Inactivo</option>
+                                </select>
+                            </div>
+                        </form>
+                        <!--fin de esta parte del codigo-->
+                    </div>
+                <!--Agregar proveedor-->
+                <a href="#" class="btn-main-action" style="text-decoration: none;">
+                    <i class="fas fa-truck"></i> Agregar Proveedor
+                </a>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre de Empresa</th>
+                            <th>Categoría de Suministro</th>
+                            <th>Correo Electrónico / Teléfono</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody> <!-- cuerpo principal de los datos/F1 -->
+                        <tr>
+                            <td><strong>#001</strong></td>
+                            <td><strong>Cartas y Estrategia Distribuciones</strong></td>
+                            <td>Cartas</td>
+                            <td>
+                                <div style="display: flex; flex-direction: column;">
+                                    <small style="color: #64748b;"><strong>MarcosPeña@gmail.com</strong></small>
+                                    <span style="font-weight: 600;"><strong> +58 412-1112233</strong></span>
+                                </div>
+                            </td>
+                            <td><span class="status active">Activo</span></td>
+                            <td> <!-- Botones para editar y eliminar -->
+                                <div class="action-buttons">
+                                    <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody> <!-- Fin del cuerpo principal de los datos -->
+                    <tbody>
+                        <tr>
+                            <td><strong>#002</strong></td>
+                            <td><strong>Protectores Elite S.A.</strong></td>
+                            <td>Accesorios</td>
+                            <td>
+                                <div style="display: flex; flex-direction: column;">
+                                    <small style="color: #64748b;"><strong>smendez@protectoreselite.com</strong></small>
+                                    <span style="font-weight: 600;"><strong>+58 212-3334455</strong></span>
+                                </div>
+                            </td>
+                            <td><span class="status active">Activo</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody><!-- Fin del cuerpo principal de los datos -->
+                    <tbody>
+                        <tr>
+                            <td><strong>#003</strong></td>
+                            <td><strong>Importadora Meeples & Dados</strong></td>
+                            <td>Juegos de Mesa</td>
+                            <td>
+                                <div style="display: flex; flex-direction: column;">
+                                    <small style="color: #64748b;"><strong>rgil.ventas@meeples.ve</strong></small>
+                                    <span style="font-weight: 600;"><strong>+58 424-9998877</strong></span>
+                                </div>
+                            </td>
+                            <td><span class="status inactive">Inactivo</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody><!-- Fin del cuerpo principal de los datos -->
+                    <tbody>
+                        <tr>
+                            <td><strong>#004</strong></td>
+                            <td><strong>Multiverso TCG Wholesale</strong></td>
+                            <td>Castas</td>
+                            <td>
+                                <div style="display: flex; flex-direction: column;">
+                                    <small style="color: #64748b;"><strong>erivas@multiversowholesale.com</strong></small>
+                                    <span style="font-weight: 600;"><strong>+58 414-5550011</strong></span>
+                                </div>
+                            </td>
+                            <td><span class="status active">Activo</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody><!-- Fin del cuerpo principal de los datos -->
+
+                    <tbody>
+                        <tr>
+                            <td><strong>#005</strong></td>
+                            <td><strong>Tableros del Mundo C.A.</strong></td>
+                            <td>Juegos de Mesa</td>
+                            <td>
+                                <div style="display: flex; flex-direction: column;">
+                                    <small style="color: #64748b;"><strong>jsoto@tablerosmundo.com</strong></small>
+                                    <span style="font-weight: 600;"><strong>+58 241-7776655</strong></span>
+                                </div>
+                            </td>
+                            <td><span class="status active">Activo</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Fin del codigo-->
             <div class="modal-container"> 
+                <!-- Editar proveedores-->
                 <div class="modal-content">
                     <div class="modal-header">
                         <h3><i class="fa-solid fa-truck-field"></i> Editar Proveedor</h3>
@@ -143,7 +303,7 @@
                             <h4>Datos de la Empresa</h4>
                             <div class="input-group">
                                 <label for="provider-name">Razón Social / Nombre:</label>
-                                <input type="text" id="provider-name" name="provider-name" value="Distribuidora Hobbies C.A." required>
+                                <input type="text" id="provider-name" name="provider-name" value="Multiverso TCG Wholesale" required>
                             </div>
                             <div class="form-row">
                                 <div class="input-group">
@@ -155,7 +315,6 @@
                                     <select id="provider-category" name="provider-category" required>
                                         <option value="nacional" selected>Nacional</option>
                                         <option value="internacional">Internacional</option>
-                                        <option value="frecuente">Frecuente</option>
                                     </select>
                                 </div>
                             </div>
@@ -166,17 +325,17 @@
                             <div class="form-row">
                                 <div class="input-group">
                                     <label for="phone">Teléfono de contacto:</label>
-                                    <input type="tel" id="phone" name="phone" value="+58 412-5555555" required>
+                                    <input type="tel" id="phone" name="phone" value="+58 414-5550011" required>
                                 </div>
                                 <div class="input-group">
                                     <label for="email">Correo Corporativo:</label>
-                                    <input type="email" id="email" name="email" value="ventas@distribuidora.com" required>
+                                    <input type="email" id="email" name="email" value="	erivas@multiversowholesale.com" required>
                                 </div>
                             </div>
                             
                             <div class="input-group">
                                 <label for="address">Dirección Fiscal:</label>
-                                <textarea id="address" name="address" rows="2" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px;">Av. Principal, Edificio Hobbies, Valencia.</textarea>
+                                <textarea id="address" name="address" rows="2" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px;">Av. Principal, Edificio Multiverso TCG Wholesale, Valencia.</textarea>
                             </div>
                         </div>
 

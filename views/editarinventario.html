@@ -130,7 +130,216 @@
             </div>
         </header>
 
+
         <!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
+        <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->  
+        <!-- Tabla de inventario - (Productos/Categorías en el sistema) -->
+            <div class="card-table">
+                <div class="table-header">
+                    <div class="header-title">         
+                        <!--filtrado -->
+                        <form class="filter-form">
+                            <div class="input-group">
+                                <label for="nombre">Nombre del Producto</label>
+                                <input type="text" id="nombre" placeholder="Insertar Nombre del Producto">
+                            </div>
+                            <div class="input-group">   <!-- Categoria -->
+                                <label for="tipo">Categoria</label>
+                                <select id="tipo">      <!-- Select con opciones -->
+                                    <option value="routers">Accesorios</option>
+                                    <option value="antenas">Cartas</option>
+                                    <option value="sublimables">Juegos de mesa</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Agregar productos -->
+                    <a href="#" class="btn-main-action" style="text-decoration: none;">
+                        <i class="fas fa-plus-circle"></i> Agregar Producto
+                    </a>
+                </div>
+                                
+                <div class="table-responsive">  
+                    <table><!--tabla completa -->
+                        <thead> <!-- Encabezado de la tabla -->
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre del Producto</th>
+                                <th>Imagen</th>
+                                <th>Categoría</th>
+                                <th>Descripción</th>
+                                <th>Stock</th>
+                                <th>Precio</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead> <!-- Fin del encabezado de la tabla -->
+                        <tbody> <!-- cuerpo principal de los datos/F1 -->
+
+                        <tbody> <!-- F2 -->
+                            <tr>
+                                <td><strong>#001</strong></td>
+                                <td><strong>Limited Pack 2025</strong></td>
+                                <td><img src="/img/BoostersLPack20252.png" alt="" width="50"></td>
+                                <td>Cartas</td>
+                                <td>El Limited Pack World Championship 2025 es un set exclusivo de Yu-Gi-Oh! TCG lanzado para el mundial de 2025 en Francia, que incluye 20 cartas (más 1 especial)</td>
+                                <td>24</td>
+                                <td><strong>2.660,75 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> <!-- Fin del cuerpo principal de los datos -->
+
+                        <tbody> <!-- F1 -->
+                            <tr>
+                                <td><strong>#002</strong></td>
+                                <td><strong>Phantom Revenge</strong></td>
+                                <td><img src="/img/BoostersPRevenge1.png" alt="" width="50"></td>
+                                <td>Cartas</td>
+                                <td>El sobre de expansión Yu-Gi-Oh! Phantom Revenge (Venganza Fantasma), lanzado a finales de 2025</td>
+                                <td>48</td>
+                                <td><strong>2.660,75 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> <!-- Fin del cuerpo principal de los datos -->
+                        </tbody>
+                            <tr>
+                                <td><strong>#003</strong></td>
+                                <td><strong>Flexxfolio 360 18-Pocket – Blue</strong></td>
+                                <td><img src="/img/FlexxfolioBlue.png" alt="Flexxfolio Blue" width="50"></td>
+                                <td>Accesorios</td>
+                                <td>Album para cartas coleccionables, color azul.</td>
+                                <td>2</td>
+                                <td><strong>16.290,75 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> <!-- Fin del cuerpo principal de los datos -->
+
+                        <tbody> <!-- F4 -->
+                            <tr>
+                                <td><strong>#004</strong></td>
+                                <td><strong>One Piece Starter Deck ST27</strong></td>
+                                <td><img src="/img/ST27-Marshall-D-Teach.png" alt="" width="50"></td>
+                                <td>Cartas</td>
+                                <td>El Starter Deck ST-27 Black Marshall D. Teach es un mazo inicial de One Piece TCG de color negro, enfocado en una estrategia de control y eliminación.</td>
+                                <td>2</td>
+                                <td><strong>9.578,70 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> <!-- Fin del cuerpo principal de los datos -->
+
+                        <tbody> <!-- F2 -->
+                            <tr>
+                                <td><strong>#005</strong></td>
+                                <td><strong>Flexxfolio 360 18-Pocket – Red</strong></td>
+                                <td><img src="/img/FlexxfolioRed.png" alt="Flexxfolio Red" width="50"></td>
+                                <td>Accesorios</td>
+                                <td>Album para cartas coleccionables, color rojo.</td>
+                                <td>2</td>
+                                <td><strong>16.290,75 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody> <!-- cuerpo principal de los datos/F1 -->
+                            <tr>
+                                <td><strong>#006</strong></td>
+                                <td><strong>Magic 60 – Card Theme Pirates</strong></td>
+                                <td><img src="/img/Magic60Card.png" alt="" width="50"></td>
+                                <td>Cartas</td>
+                                <td>El tema de cartas Magic 60 – Card Theme Pirates es una colección de cartas temáticas basadas en el universo de los piratas.</td>
+                                <td>4</td>
+                                <td><strong>14.900,20 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> <!-- Fin del cuerpo principal de los datos -->
+
+                        <tbody> <!--F3 -->
+                            <tr>
+                                <td><strong>#007</strong></td>
+                                <td><strong>Catan Navegantes</strong></td>
+                                <td><img src="/img/Catan3.png" alt="Catan3" width="50"></td>
+                                <td>Juegos de mesa</td>
+                                <td>Catan: Navegantes es una expansión del popular juego de estrategia diseñada por Klaus Teuber, donde 3-4 jugadores expanden sus civilizaciones a través de múltiples islas, construyendo barcos y explorando nuevas rutas marítimas</td>
+                                <td>1</td>
+                                <td><strong>24.276,00 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> <!-- Fin del cuerpo principal de los datos -->
+                        <tbody> <!-- F3 -->
+                            <tr>
+                                <td><strong>#008</strong></td>
+                                <td><strong>Sidewinder 100+ Xenoskin – Green</strong></td>
+                                <td><img src="/img/SidewinderGreen.png" alt="Sidewinder Green" width="50"></td>
+                                <td>Accesorios</td>
+                                <td>Estuche robusto y elegante para mazos de cartas, color verde.</td>
+                                <td>1</td>
+                                <td><strong>13.963,50 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody> <!-- F6 -->
+                            <tr>
+                            <td><strong>#009</strong></td>
+                                <td><strong>FlipTray 80+ Xenoskin – Purple</strong></td>
+                                <td><img src="/img/FlipnTrayPurple.png" alt="FlipTray Purple" width="50"></td>
+                                <td>Accesorios</td>
+                                <td> Caja de cartas de alta calidad, de color púrpura.</td>
+                                <td>2</td>
+                                <td><strong>18.618,00 Bs</strong></td>
+                                <td> <!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table><!-- Fin de la tabla completa -->
+                </div>
+            </div> <!--Fin del codigo -->
+        </div>
+        
+        <!--Fin del codigo -->
         <div class="modal-container"> 
         <!-- Editar productos-->
             <div class="modal-content">
@@ -143,15 +352,20 @@
                         <h4>Información del Inventario</h4>
                         <div class="input-group">
                             <label for="prod-name">Nombre del Producto:</label>
-                            <input type="text" id="prod-name" name="prod-name" value="Laptop Toshiba" required>
+                            <input type="text" id="prod-name" name="prod-name" value="Phantom Revenge" required>
                         </div>
+                        <div class="input-group">
+                            <label for="prod-descripcion">Descripción del Producto</label>
+                            <textarea id="prod-descripcion" rows="3" placeholder="Describe las características del producto...">El sobre de expansión Yu-Gi-Oh! Phantom Revenge (Venganza Fantasma), lanzado a finales de 2025</textarea>
+                        </div>
+
                         <div class="form-row">
                             <div class="input-group">
                                 <label for="prod-category">Categoría:</label>
                                 <select id="prod-category" name="prod-category" required>
-                                    <option value="electronica" selected>Electrónica</option>
-                                    <option value="hogar">Hogar</option>
-                                    <option value="oficina">Oficina</option>
+                                    <option value="electronica" selected>Accesorios</option>
+                                    <option value="hogar">Cartas</option>
+                                    <option value="oficina">Juegos de Mesa</option>
                                 </select>
                             </div>
                             <div class="input-group">
@@ -165,11 +379,11 @@
                         <div class="form-row">
                             <div class="input-group">
                                 <label for="prod-stock">Stock Actual:</label>
-                                <input type="number" id="prod-stock" name="prod-stock" value="24" required>
+                                <input type="number" id="prod-stock" name="prod-stock" value="48" required>
                             </div>
                             <div class="input-group">
                                 <label for="prod-price">Precio Unitario (Bs):</label>
-                                <input type="number" step="0.01" id="prod-price" name="prod-price" value="2660.75" required>
+                                <input type="number" step="2.660,75 Bs" id="prod-price" name="prod-price" value="2660.75" required>
                             </div>
                         </div>
                     </div>
