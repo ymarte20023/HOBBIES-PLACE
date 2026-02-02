@@ -495,7 +495,7 @@
     text-decoration: none;
     color: #fdfcfc; /* color de las letras de la tarjeta */
     font-size: 12px;
-    transition: background 0.2s;
+    : background 0.2s;
 }
 
 .card-footer:hover {
@@ -737,33 +737,65 @@ table tbody td {
 }
 /* Fin del codigo */
 
-/* Caputulo 5: Modales - 20/01/2026*/
-/* Agregar Dartos (Proveedor, ventas, usuarios, invnetario) */
-/* --- ESTILOS DEL MODAL (REGISTRAR VENTA) --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5. Modal --- */
+
 /* 1. Contenedor de fondo (Overlay) */
-.modal-container {
+.modal-container  {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2000; /* Por encima de la sidebar y navbar */
-    backdrop-filter: blur(4px); /* Efecto de desenfoque al fondo */
-}
+    z-index: 2000;
+    padding: 20px; /* Espacio de seguridad para móviles */
+}/* Conservar */
 
-/* 2. Caja del contenido */
-.modal-content {
+/* 2. Caja del contenido - ADAPTABLE */
+/* 2. Modal Card */
+.modal-content  {
     background: #fff;
-    width: 90%;
+    width: 100%;
     max-width: 800px;
+    max-height: 95vh; /* Evita que el modal sea más alto que la pantalla */
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Organiza header, form y footer en vertical */
+    overflow: hidden; 
     animation: slideIn 0.3s ease-out;
+    /*width: 500px;*/
 }
 
 @keyframes slideIn {
@@ -771,14 +803,16 @@ table tbody td {
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* 3. Encabezado del Modal */
+/* 3. Encabezado Fijo */
 .modal-header {
-    background: #1e293b; /* Color oscuro profesional */
+
+    background: #1e293b;
     color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0; /* Impide que el header se encoja */
 }
 
 .modal-header h3 {
@@ -787,41 +821,25 @@ table tbody td {
     display: flex;
     align-items: center;
     gap: 10px;
+
 }
 
 .close-modal {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
+    background: none; /* Sin el cuadro blanco */
+    border: none; /* No se ve ese bton */
+    color: #f11111; /* Color del botón de cerrar (x roja) */
+    font-size: 1.5rem; /* Tamaño */
+    cursor: pointer; /* Poner el cursor en la mano */
     transition: color 0.2s;
 }
 
-/* 4. Color de la x para cerrar */
-.close-modal:hover {
-    color: #ef4444;
+/* 4. Cuerpo del Formulario con SCROLL */
+/* Esto es avance */
+.modal-form  { 
+    padding: 20px; /* le agrega unos bordes */
 }
 
-/* 4. Cuerpo del Formulario */
-.modal-form {
-    padding: 25px;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-    gap: 30px;
-    margin-bottom: 25px;
-}
-
-/* Responsive: una columna en pantallas pequeñas */
-@media (max-width: 768px) {
-    .form-grid { grid-template-columns: 1fr; }
-}
-
-
-/* Color de las letras */
+/* Títulos de sección */
 .form-section h4 {
     color: #292458;
     border-bottom: 2px solid #f1f5f9;
@@ -831,6 +849,7 @@ table tbody td {
     text-transform: uppercase;
 }
 
+/* 5. divicion bonita que nos gusta sin ese colapso molesto */
 /* Inputs y Grupos */
 .input-group {
     margin-bottom: 15px;
@@ -846,124 +865,71 @@ table tbody td {
 }
 
 .input-group input, 
-.input-group select {
+.input-group select,
+.input-group textarea {
     padding: 10px;
     border: 1px solid #cbd5e1;
     border-radius: 6px;
     font-size: 0.95rem;
     outline: none;
     transition: border-color 0.2s;
+    width: 100%;
 }
 
-/* Bodeado del campo */
-.input-group input:focus, 
-.input-group select:focus {
-    border-color: #3b82f6; 
-}
+.input-group input:focus { border-color: #3b82f6; }
 
-/* Fila de Unidades y Precio */
+/* Filas internas */
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
 
-input[readonly] {
-    background-color: #f8fafc;
-    color: #64748b;
-    cursor: not-allowed;
-}
-
-/* 5. Pie del Modal (Footer) */
+/* 5. Pie del Modal (Footer) Fijo */
 .form-footer {
     border-top: 2px solid #f1f5f9;
-    padding-top: 20px;
+    padding: 15px 25px;
+    background: #ffffff;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end; /* Botones a la derecha */
+    flex-shrink: 0;
 }
 
-.total-display {
-    display: flex;
-    flex-direction: column;
-}
-
-.total-display span {
-    font-size: 0.85rem;
-    color: #64748b;
-}
-
-.total-display strong {
-    font-size: 1.5rem;
-    color: #1e293b;
-}
-
-/* Botones de acción */
 .form-actions {
     display: flex;
     gap: 10px;
-}
+}/* Fin del codigo */
 
+
+/* 6. Botones */
+/* Botones con tus colores */
 .btn-secondary {
-    background: #be273e; /* Color del boton*/
-    color: #FFFFFF; /* Color de las letras */
+    background: #be273e;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
     font-weight: 600;
-    transition: background 0.2s;
 }
 
-/* Color de los botones */
 .btn-primary {
-    background: #0e1111; /* Color del boton */
-    color: #FFFFFF; /* Color de las letras */
+    background: #0e1111;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
     font-weight: 600;
-    transition: background 0.2s;
 }
 
 .btn-primary:hover {
     background: #333; /* Color al pasar el mouse */
+    transition: 0.2s;
 }
 
 .btn-secondary:hover {
     background: #b62b40da; /* Color al pasar el mouse */
+    transition: 0.3s;
 }
 /* Fin del codigo */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
