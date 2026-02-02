@@ -131,37 +131,51 @@
         </header>
 
         <!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
-        <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->
-            <!-- Editor de  Usuarios-->
-            <div class="edit-user-container"> <!-- Contenedor del editor de usuarios-->
-                <h2>Editar Usuario</h2>
-                <form action="" method="post" class="edit-user-form"> <!-- Formulario para editar usuario-->
-                    <div class="form-group">
-                        <label for="username">Nombre completo:</label>
-                        <input type="text" id="username" name="username" value="Edgar Reyes" required>
-                    
-                    <div class="form-group">
-                        <label for="email">Telefono</label>
+        <div class="modal-container">
+        <!-- Editar usuarios-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fa-solid fa-user-pen"></i> Editar Usuario</h3>
+                    <button class="close-modal" type="button" title="Cerrar">&times;</button>
+                </div>
+                <form action="" method="post" class="modal-form">
+                    <div class="form-section">
+                        <h4>Datos Personales</h4>
+                        <div class="input-group">
+                            <label for="username">Nombre completo:</label>
+                            <input type="text" id="username" name="username" value="Edgar Reyes" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="phone">Teléfono:</label>
+                                <input type="tel" id="phone" name="phone" value="+58 412-0000000" placeholder="Ej: +58...">
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" value="edgar.reyes@example.com" required>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" value="edgar.reyes@example.com" required>
+                    <div class="form-section">
+                        <h4>Permisos de Acceso</h4>
+                        <div class="input-group">
+                            <label for="role">Rol del Sistema:</label>
+                            <select id="role" name="role" required>
+                                <option value="admin" selected>Super-Admin</option>
+                                <option value="admin_plus">Administrador</option>
+                                <option value="user">Usuario</option>
+                            </select>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="role">Rol:</label>
-                        <select id="role" name="role" required> <!-- Select de los roles de usuario-->
-                            <option value="admin">Super-Admin</option>
-                            <option value="user">Administrador</option>
-                            <option value="user">Usuario</option>
-                        </select>
+                    <div class="form-footer">
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary">Cancelar</button>
+                            <button type="submit" class="btn-primary">Guardar Cambios</button>
+                        </div>
                     </div>
-                    <button type="submit" class="btn-submit">Guardar Cambios</button>
                 </form>
-
+            </div>
         </div>
     </section> 
-
 </body>
 </html>

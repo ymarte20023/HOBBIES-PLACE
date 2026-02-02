@@ -495,7 +495,6 @@
     text-decoration: none;
     color: #fdfcfc; /* color de las letras de la tarjeta */
     font-size: 12px;
-    : background 0.2s;
 }
 
 .card-footer:hover {
@@ -737,36 +736,7 @@ table tbody td {
 }
 /* Fin del codigo */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 5. Modal --- */
-
 /* 1. Contenedor de fondo (Overlay) */
 .modal-container  {
     position: fixed;

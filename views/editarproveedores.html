@@ -132,18 +132,64 @@
         <!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
         <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->
             <!-- Editar productos-->
-            <div class="edit-user-container"> <!-- Contenedor del editor de usuarios-->
-                <h2>Editar productos</h2>
-                <form action="" method="post" class="edit-user-form"> <!-- Formulario para editar productos-->
-                    <div class="form-group">
-                        <label for="">Proveedores</label>
-                        <input type="text" id="" name="">
+            <div class="modal-container"> 
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3><i class="fa-solid fa-truck-field"></i> Editar Proveedor</h3>
+                        <button class="close-modal" type="button" title="Cerrar">&times;</button>
                     </div>
-                    <button type="submit" class="btn-submit">Guardar Cambios</button>
-                </form>
+                    <form action="" method="post" class="modal-form">
+                        <div class="form-section">
+                            <h4>Datos de la Empresa</h4>
+                            <div class="input-group">
+                                <label for="provider-name">Razón Social / Nombre:</label>
+                                <input type="text" id="provider-name" name="provider-name" value="Distribuidora Hobbies C.A." required>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="provider-id">RIF / Identificación Fiscal:</label>
+                                    <input type="text" id="provider-id" name="provider-id" value="J-12345678-9" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="provider-category">Tipo de Proveedor:</label>
+                                    <select id="provider-category" name="provider-category" required>
+                                        <option value="nacional" selected>Nacional</option>
+                                        <option value="internacional">Internacional</option>
+                                        <option value="frecuente">Frecuente</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="form-section">
+                            <h4>Información de Contacto</h4>
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="phone">Teléfono de contacto:</label>
+                                    <input type="tel" id="phone" name="phone" value="+58 412-5555555" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="email">Correo Corporativo:</label>
+                                    <input type="email" id="email" name="email" value="ventas@distribuidora.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="address">Dirección Fiscal:</label>
+                                <textarea id="address" name="address" rows="2" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px;">Av. Principal, Edificio Hobbies, Valencia.</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-footer">
+                            <div class="form-actions">
+                                <button type="button" class="btn-secondary">Cancelar</button>
+                                <button type="submit" class="btn-primary">Actualizar Proveedor</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section> 
-
 </body>
 </html>
