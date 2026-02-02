@@ -137,18 +137,17 @@
                         <form class="filter-form">
                             <div class="input-group">
                                 <label for="nombre-empresa">Nombre de Empresa</label>
-                                <input type="text" id="nombre-empresa" placeholder="Insertar nombre de la empresa">
+                                <input type="text" id="nombre-empresa" placeholder="Nombre de la empresa">
                             </div>
 
                             <div class="input-group">
                                 <label for="contacto">Contacto</label>
-                                <input type="text" id="contacto" placeholder="Insertar Correo o Teléfono">
+                                <input type="text" id="contacto" placeholder="Correo electronico o Teléfono">
                             </div>
 
                             <div class="input-group"> <!-- Categoria -->
                                 <label for="categoria-suministro">Categoría</label>
                                 <select id="categoria-suministro"><!-- Select con opciones -->
-                                    <option value="" disabled selected>Seleccione...</option>
                                     <option value="cartas">Cartas</option>
                                     <option value="accesorios">Accesorios</option>
                                     <option value="juegos-mesa">Juegos de Mesa</option>
@@ -158,15 +157,15 @@
                             <div class="input-group">
                                 <label for="estado-proveedor">Estado</label>
                                 <select id="estado-proveedor">
-                                    <option value="" disabled selected>Seleccione...</option>
                                     <option value="activo">Activo</option>
                                     <option value="inactivo">Inactivo</option>
+                                    <option value="inactivo">Pendiente</option>
                                 </select>
                             </div>
                         </form>
                     </div>
                 <a href="#" class="btn-main-action" style="text-decoration: none;">
-                    <i class="fas fa-truck"></i> Agregar Proveedor
+                    <i class="fas fa-plus-circle"></i> Agregar Proveedor
                 </a>
             </div>
 
@@ -193,7 +192,7 @@
                                     <span style="font-weight: 600;"><strong> +58 412-1112233</strong></span>
                                 </div>
                             </td>
-                            <td><span class="status active">Activo</span></td>
+                            <td><span class="status-pill status-success">Activo</span></td>
                             <td> <!-- Botones para editar y eliminar -->
                                 <div class="action-buttons">
                                     <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
@@ -213,7 +212,7 @@
                                     <span style="font-weight: 600;"><strong>+58 212-3334455</strong></span>
                                 </div>
                             </td>
-                            <td><span class="status active">Activo</span></td>
+                            <td><span class="status-pill status-success">Activo</span></td>
                             <td>
                                 <div class="action-buttons">
                                     <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
@@ -233,7 +232,7 @@
                                     <span style="font-weight: 600;"><strong>+58 424-9998877</strong></span>
                                 </div>
                             </td>
-                            <td><span class="status inactive">Inactivo</span></td>
+                            <td><span class="status-pill status-success">Activo</span></td>
                             <td>
                                 <div class="action-buttons">
                                     <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
@@ -253,7 +252,7 @@
                                     <span style="font-weight: 600;"><strong>+58 414-5550011</strong></span>
                                 </div>
                             </td>
-                            <td><span class="status active">Activo</span></td>
+                            <td><span class="status-pill status-success">Activo</span></td>
                             <td>
                                 <div class="action-buttons">
                                     <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
@@ -274,7 +273,7 @@
                                     <span style="font-weight: 600;"><strong>+58 241-7776655</strong></span>
                                 </div>
                             </td>
-                            <td><span class="status active">Activo</span></td>
+                            <td><span class="status-pill status-success">Activo</span></td>
                             <td>
                                 <div class="action-buttons">
                                     <button class="btn-icon edit"><i class="fas fa-edit"></i></button>

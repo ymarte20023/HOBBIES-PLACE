@@ -137,26 +137,17 @@
                     <div class="header-title">
                         <!--filtrado -->
                         <form class="filter-form">
-                            <div class="input-group">
-                                <label for="buscar-pedido">ID o Cliente</label>
-                                <input type="text" id="buscar-pedido" placeholder="Ej: PED-1024 o Carlos">
-                            </div>
+
                             <div class="input-group">
                                 <label for="filtro-fecha">Fecha</label>
                                 <input type="date" id="filtro-fecha">
                             </div>
-                            <div class="input-group">   <label for="tipo-categoria">Categoría</label>
-                                <select id="tipo-categoria">      <option value="" disabled selected>Seleccione...</option>
-                                    <option value="accesorios">Accesorios</option>
-                                    <option value="cartas">Cartas</option>
-                                    <option value="juegos-mesa">Juegos de mesa</option>
-                                </select>
-                            </div>
+
                             <div class="input-group">   <label for="filtro-estado">Estado</label>
                                 <select id="filtro-estado">
-                                    <option value="todos">Todos</option>
                                     <option value="entregado">Entregado</option>
                                     <option value="pendiente">Pendiente</option>
+                                    <option value="cancelado">Cancelado</option>
                                 </select>
                             </div>
                         </form>

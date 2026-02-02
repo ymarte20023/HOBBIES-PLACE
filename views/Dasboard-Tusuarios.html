@@ -138,12 +138,9 @@
                         <form class="filter-form">
                             <div class="input-group">
                                 <label for="nombre">Usuario</label>
-                                <input type="text" id="nombre" placeholder="Insertar Nombre del Usuario">
+                                <input type="text" id="nombre" placeholder="Nombre del Usuario">
                             </div>
-                            <div class="input-group">
-                                <label for="clave">Clave</label>
-                                <input type="text" id="clave" placeholder="Insertar Clave del Usuario">
-                            </div>
+
                             <div class="input-group">   <!-- Categoria -->
                                 <label for="tipo">Rol</label>
                                 <select id="tipo">      <!-- Select con opciones -->
@@ -152,11 +149,19 @@
                                     <option value="sublimables">Usuario</option>
                                 </select>
                             </div>
+                            <div class="input-group">
+                                <label for="estado-usuario">Estado</label>
+                                <select id="estado-usuario">
+                                    <option value="activo">Activo</option>
+                                    <option value="inactivo">Inactivo</option>
+                                    <option value="pendiente">Pendiente</option>
+                                </select>
+                            </div>
                         </form>
                     </div>
                     <!-- Agregar usuarios -->
                     <a href="#" class="btn-main-action" style="text-decoration: none;">
-                        <i class="fas fa-user-plus"></i> Agregar Usuario
+                        <i class="fas fa-plus-circle"></i> Agregar Usuario
                     </a>
                 </div>
 
