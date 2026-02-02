@@ -535,12 +535,8 @@
 /* Fin del codigo */
 
 /* Capitulo 4: Tablas - 14/01/2026* 16/01/2026*/
-/* parte 01: Tabla de ventas*/
-/* Ejemplo de filtrado*/
-
-/* 1.1 filtrado*/
-
-/* Contenedor principal del filtro ADAPTADO */
+/* Tabla de ventas*/
+/* Parte 1: de filtrado*/
 .filter-container {
     background: #ffffff;
     padding: 1.5rem;
@@ -584,7 +580,7 @@
     border: 1px solid #d1d5db;
     border-radius: 6px;
     background-color: #ffffff;
-    color: #1f2937;
+    color: #37291f;
     font-size: 0.9rem;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -594,7 +590,7 @@
 .input-group input:focus, 
 .input-group select:focus {
     border-color: #f3f6fa; 
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); 
+    box-shadow: 0 0 0 3px rgba(75, 246, 59, 0.1); 
 }
 
 /* Ajuste específico para el placeholder */
@@ -604,14 +600,14 @@
 }/* Fin dle codigo*/
 
 
-/* 1.1 Tablas*/
+/* Parte 2: Tablas*/
 /* Contenedor tipo tarjeta */
 .card-table {
     background: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #e2e8f0; /* Color del borde de la tabla */
 }
 
 /* Cabecera de la tabla */
@@ -620,24 +616,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9; /* Color de la cabecera */
 }
 
-.header-title h2 {
-    margin: 0;
-    color: #1e293b;
-    font-size: 1.25rem;
-}
-
-.header-title p {
-    margin: 0;
-    color: #64748b;
-    font-size: 0.85rem;
-}
 
 /* Botón de acción principal */
 .btn-main-action {
-    background-color: var(--color-bg-sidebar);
+    background-color: #0e1111;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -648,10 +633,12 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: background 0.3s; /* Tiempo en el que cambia el color*/
 }
 
+/* Los botones operan desde aqui (Usuarios, Proveedores, Inventario) */
 .btn-main-action:hover {
-    background-color: #334155;
+    background: #333; /* Color del boton al pasar el mouse */
 }
 
 /* Estilos de la Tabla */
@@ -659,16 +646,18 @@
     overflow-x: auto;
 }
 
+/* Celdas de la Tabla */
 table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
 }
 
+/* Tabla Superior*/
 table thead th {
     background-color: #f8fafc;
     padding: 1rem 1.5rem;
-    color: #475569;
+    color: #695247; /* Color de las letras */
     font-weight: 600;
     font-size: 0.85rem;
     text-transform: uppercase;
@@ -680,13 +669,14 @@ table tbody tr {
     transition: background 0.2s;
 }
 
+/* Transicion de color*/
 table tbody tr:hover {
     background-color: #f8fafc;
 }
 
 table tbody td {
     padding: 1rem 1.5rem;
-    color: #334155;
+    color: #334155;    /* Color de las letras */
     font-size: 0.9rem;
 }
 
@@ -733,21 +723,49 @@ table tbody td {
 
 .btn-icon.edit {
     background-color: #e0e7ff;
-    color: #4338ca;
+    color: #4338ca; /* Color del pin para notar */
 }
 
 .btn-icon.delete {
     background-color: #fee2e2;
-    color: #b91c1c;
+    color: #b91c1c; /* Color del pin de eliminar */
 }
 
-.btn-icon:hover {
-    transform: translateY(-2px);
-    filter: brightness(0.9);
+.btn-icon:hover { /* Trancicion de movimiento */
+    filter: brightness(0.9);     /* el boton sube ligeramente */
+    transform: translateY(-2px); /* El boton brilla */
 }
 /* Fin del codigo */
 
-/* Capitulo 5: Modales - 20/01/2026*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Caputulo 5: Modales - 20/01/2026*/
 /* Agregar Dartos (Proveedor, ventas, usuarios, invnetario) */
 /* --- ESTILOS DEL MODAL (REGISTRAR VENTA) --- */
 /* 1. Contenedor de fondo (Overlay) */
@@ -829,8 +847,10 @@ table tbody td {
     .form-grid { grid-template-columns: 1fr; }
 }
 
+
+/* Color de las letras */
 .form-section h4 {
-    color: #64748b;
+    color: #8b7564;
     border-bottom: 2px solid #f1f5f9;
     padding-bottom: 8px;
     margin-bottom: 15px;
@@ -862,6 +882,7 @@ table tbody td {
     transition: border-color 0.2s;
 }
 
+/* Bodeado del campo */
 .input-group input:focus, 
 .input-group select:focus {
     border-color: #3b82f6; 
@@ -920,8 +941,9 @@ input[readonly] {
     font-weight: 600;
 }
 
-.btn-main-action {
-    background: #1e293b; /* Vercion que estamos modificando */
+/* Color de los botones */
+.btn-primary {
+    background: #0e1111; /* Vercion que estamos modificando */
     color: white;
     padding: 10px 20px;
     border-radius: 6px;
@@ -931,7 +953,39 @@ input[readonly] {
     transition: background 0.2s;
 }
 
-.btn-main-action:hover {
-    background: #2563eb;
+.btn-primary:hover {
+    background: #333; /* Color al pasar el mouse */
 }
 /* Fin del codigo */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
