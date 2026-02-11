@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- Dasboar- SuperAdministrador (HOME)-->
+<!DOCTYPE html> <!-- Dasboar completo - SuperAdministrador.-->
 <html lang="es"> <!-- <html> etiqueta raíz de toda la página HTML.-->
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/dashboard.css"> <!-- Enlace al archivo CSS externo -->
     <script src="/js/script.js"></script><!-- Enlazar JavaScript con hojas HTML -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
-	<title>Home</title> <!-- DASHBOARD DE HOBBIES PLACE-->
+	<title>Dashboard - SuperAdministrador</title> <!-- DASHBOARD DE HOBBIES PLACE-->
 </head> 
 <body>
 <div class="dashboard-wrapper"> <!-- Contenedor principal del Dashboard-->
@@ -120,71 +120,86 @@
                 </div>
             </div>
         </header>
-
         <!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
-        <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->
-            <h1>Bienvenido a Hobbies Place</h1>
-        <!-- Alertas de Inventario -->
-            <div class="stats-grid"> <!-- Contendor-->
-                <div class="stat-card"> <!-- Contendor 1 (Ventas)-->
-                    <div class="card-body">
-                        <div class="icon-box bg-green">
-                            <i class="fas fa-dolly"></i> </i> <!--Icono de Fon awesome (Fa dolly)-->
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label">Salidas</span>
-                        </div>
+        <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->      
+        
+        <!-- Reporte -->
+            <div class="report-container">
+                <div class="report-header">
+                    <div class="brand-info">
+                        <h2>Reporte de Valoración de Inventario</h2>
+                        <p><strong>Establecimiento:</strong> Hobbies Place - Tienda fisica</p>
+                        <p><strong>Fecha de Corte:</strong> 28 de Enero, 2026</p>
                     </div>
-                    <a href="#" class="card-footer">
-                        Ir a salidas <i class="fa-solid fa-angles-right"></i>
-                    </a>
-                </div> <!-- Fin del Contendor-->
-                
-                <div class="stat-card"> <!-- Contendor 2 (Productos)-->
-                    <div class="card-body">
-                        <div class="icon-box bg-purple">
-                            <i class="fa-solid fa-box-open"></i> <!--Icono de Fon awesome (Open box)-->
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-number">112</span>
-                            <span class="stat-label">Inventario</span>
-                        </div>
-                    </div>
-                    <a href="#" class="card-footer">
-                        Ir a inventario <i class="fa-solid fa-angles-right"></i>
-                    </a>
-                </div> <!-- Fin del contendor-->
-
-                <div class="stat-card"> <!-- Contendor 4 (Usuarios)-->
-                    <div class="card-body">
-                        <div class="icon-box bg-blue">
-                            <i class="fa-solid fa-user-gear"></i> <!--Icono de Fon awesome (User gear)-->
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label">Usuarios</span>
-                        </div>
-                    </div>
-                    <a href="#" class="card-footer">
-                        Ir a Usuarios <i class="fa-solid fa-angles-right"></i>
-                    </a>
-                </div> <!-- Fin del contendor-->
-            </div>
-            
-            <!-- Alertas de Inventario -->
-            <div class="alert-section">
-                <div class="alert-header">ALERTAS DE INVENTARIO</div>
-                <div class="alert-content">
-                    <h2>No hay alertas</h2>
-                    <p>Por el momento no hay alertas de inventario, estas se muestran cuando el inventario ha alcanzado el nivel mínimo.</p>
                 </div>
-            </div> <!-- fin del Codigo-->
-        </div>
-    </div>
+
+                <div class="report-summary-grid">
+                    <div class="category-pill">Accesorios: 10 und</div>
+                    <div class="category-pill">Cartas TCG: 96 und</div>
+                    <div class="category-pill">Juegos de Mesa: 06 und</div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="report-table">
+                        <thead>
+                            <tr>
+                                <th>SKU</th>
+                                <th>Producto</th>
+                                <th>Categoría</th>
+                                <th>Stock Actual</th>
+                                <th>Costo Unit.</th>
+                                <th>Total Inventario</th>
+                                <th>Estado Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>UG-10234</strong></td>
+                                <td>Flexxfolio 360 18-Pocket – Red</td>
+                                <td>Accesorios</td>
+                                <td>2</td> <!-- Cuantos queda en ele inventario-->
+                                <td>16.290,75</td>
+                                <td>32.581,50</td>
+                                <td><span class="badge badge-danger">Agotado</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>MTG-ONE-EN</strong></td>
+                                <td>La Selva Prohibida</td>
+                                <td>Juego de mesas</td>
+                                <td>1</td>
+                                <td>21.286,00</td>
+                                <td>21.286,00</td>
+                                <td><span class="badge badge-danger">Agotado</span></td>
+                            </tr>
+
+
+                            <tr>
+                                <td><strong>DS-11002</strong></td>
+                                <td>Limited Pack 2025</td>
+                                <td>Juego de cartas</td>
+                                <td>24</td>
+                                <td>2.660,75</td>
+                                <td>63.858,00</td>
+                                <td><span class="badge badge-normal">Normal</span></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="total-row">
+                                <td colspan="5">VALOR TOTAL DEL ACTIVO EN ESTANTERÍA</td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="report-footer">
+                    <button class="btn-export pdf"><i class="fas fa-file-pdf"></i> Exportar PDF</button>
+                    <p>Generado por: Super-Admin | Hobbies Place Inventory System v2.0</p>
+                </div>
+            </div>
+        <div><!-- Fin del contenedor-->
     </section> 
 </div> <!-- fin del Contenedor principal del Dashboard-->
-
 
 </body>
 </html>

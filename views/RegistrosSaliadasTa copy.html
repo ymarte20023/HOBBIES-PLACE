@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- Dasboar- SuperAdministrador (HOME)-->
+<!DOCTYPE html> <!-- Dasboar completo - SuperAdministrador.-->
 <html lang="es"> <!-- <html> etiqueta raíz de toda la página HTML.-->
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/dashboard.css"> <!-- Enlace al archivo CSS externo -->
     <script src="/js/script.js"></script><!-- Enlazar JavaScript con hojas HTML -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
-	<title>Home</title> <!-- DASHBOARD DE HOBBIES PLACE-->
+	<title>Registro de salidas</title> <!-- DASHBOARD DE HOBBIES PLACE-->
 </head> 
 <body>
 <div class="dashboard-wrapper"> <!-- Contenedor principal del Dashboard-->
@@ -57,14 +57,6 @@
         </div>
         
         <div class="menu-group"><!--3 Grupo-->
-        <span class="group-title">Administración</span>
-            <li class=><!--Lista5-->
-                <a href="#" class="menu-link">
-                    <i class="fa-solid fa-user-gear"></i> <!--Icono de Fon awesome (User gear)-->
-                    <span>Usuarios</span> 
-                </a>
-            </li> 
-
             <li class="menu-item menu-item-static"><!--Lista7-->
                 <a href="#" class="menu-link">
                     <i class="fa-solid fa-gear"></i> <!--Icono de Fon awesome (Settings)-->
@@ -95,6 +87,8 @@
 </aside>
 <!--2.3 Fin del SIDEBAR-->
 
+
+
 <!--2.2 TOP NAVBAR/(Menu de Arriba)- TAREA: TOP NAVBAR para el Dasboard PERFIL DE USUARIO 12/01/2026-->
     <section class="main-view"> <!-- main-view es la que genera ese fondo gris.-->
         <header class="top-navbar">
@@ -111,7 +105,7 @@
 
                 <div class="user-profile">
                     <div class="profile-text">
-                        <span class="user-name">Administrador</span>
+                        <span class="user-name">Usuario</span>
                         <span class="user-status">En línea</span>
                     </div>
                     <div class="profile-avatar">
@@ -120,71 +114,96 @@
                 </div>
             </div>
         </header>
-
         <!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
         <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->
-            <h1>Bienvenido a Hobbies Place</h1>
-        <!-- Alertas de Inventario -->
-            <div class="stats-grid"> <!-- Contendor-->
-                <div class="stat-card"> <!-- Contendor 1 (Ventas)-->
-                    <div class="card-body">
-                        <div class="icon-box bg-green">
-                            <i class="fas fa-dolly"></i> </i> <!--Icono de Fon awesome (Fa dolly)-->
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label">Salidas</span>
-                        </div>
-                    </div>
-                    <a href="#" class="card-footer">
-                        Ir a salidas <i class="fa-solid fa-angles-right"></i>
-                    </a>
-                </div> <!-- Fin del Contendor-->
-                
-                <div class="stat-card"> <!-- Contendor 2 (Productos)-->
-                    <div class="card-body">
-                        <div class="icon-box bg-purple">
-                            <i class="fa-solid fa-box-open"></i> <!--Icono de Fon awesome (Open box)-->
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-number">112</span>
-                            <span class="stat-label">Inventario</span>
-                        </div>
-                    </div>
-                    <a href="#" class="card-footer">
-                        Ir a inventario <i class="fa-solid fa-angles-right"></i>
-                    </a>
-                </div> <!-- Fin del contendor-->
+        <!-- tabla de ventas -->
+            <div class="card-table">
+                <div class="table-header">
+                    <div class="header-title">
+                        <!--filtrado -->
+                        <form class="filter-form">
 
-                <div class="stat-card"> <!-- Contendor 4 (Usuarios)-->
-                    <div class="card-body">
-                        <div class="icon-box bg-blue">
-                            <i class="fa-solid fa-user-gear"></i> <!--Icono de Fon awesome (User gear)-->
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label">Usuarios</span>
-                        </div>
+                            <div class="input-group">
+                                <label for="filtro-fecha">Fecha de salida</label>
+                                <input type="date" id="filtro-fecha">
+                            </div>
+
+                            <div class="input-group">   <label for="filtro-estado">Estado</label>
+                                <select id="filtro-estado">
+                                    <option value="entregado">Entregado</option>
+                                    <option value="pendiente">Pendiente</option>
+                                    <option value="cancelado">Cancelado</option>
+                                </select>
+                            </div>
+                        </form>
                     </div>
-                    <a href="#" class="card-footer">
-                        Ir a Usuarios <i class="fa-solid fa-angles-right"></i>
-                    </a>
-                </div> <!-- Fin del contendor-->
-            </div>
-            
-            <!-- Alertas de Inventario -->
-            <div class="alert-section">
-                <div class="alert-header">ALERTAS DE INVENTARIO</div>
-                <div class="alert-content">
-                    <h2>No hay alertas</h2>
-                    <p>Por el momento no hay alertas de inventario, estas se muestran cuando el inventario ha alcanzado el nivel mínimo.</p>
                 </div>
-            </div> <!-- fin del Codigo-->
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Producto / SKU</th>
+                                <th>Motivo de Salida</th>
+                                <th>Cant.</th>
+                                <th>Fecha y Hora</th>
+                                <th>Responsable</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1</strong></td>
+                                <td>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <span style="font-weight: 600;">Flexxfolio 360 18-Pocket – Red</span>
+                                        <small style="color: #64748b;">SKU: UG-10234</small>
+                                    </div>
+                                </td>
+                                <td>Venta Directa</td>
+                                <td><strong>1</strong></td>
+                                <td>16/01/2026 - 10:30 AM</td>
+                                <td>Super-Admin</td>
+                                <td><span class="status-pill status-success">Entregado</span></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <span style="font-weight: 600;">La Selva Prohibida</span>
+                                        <small style="color: #64748b;">SKU: DS-11002</small>
+                                    </div>
+                                </td>
+                                <td>Venta Directa</td>
+                                <td><strong>1</strong></td>
+                                <td>15/01/2026 - 04:15 PM</td>
+                                <td>Administrador</td>
+                                <td><span class="status-pill status-success">Entregado</span></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <span style="font-weight: 600;">Limited Pack 2025</span>
+                                        <small style="color: #64748b;">SKU: UG-10567</small>
+                                    </div>
+                                </td>
+                                <td>Venta Directa</td>
+                                <td><strong>1</strong></td>
+                                <td>15/01/2026 - 09:00 AM</td>
+                                <td>Administrador</td>
+                                <td><span class="status-pill status-success">Entregado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div> <!-- Fin del codigo-->  
         </div>
-    </div>
     </section> 
 </div> <!-- fin del Contenedor principal del Dashboard-->
-
 
 </body>
 </html>

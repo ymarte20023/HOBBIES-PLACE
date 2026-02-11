@@ -34,8 +34,8 @@
             </li>
             <li class="menu-item menu-item-static"><!--Lista2-->
                 <a href="#" class="menu-link">
-                    <i class="fa-brands fa-cash-app"></i> <!--Icono de Fon awesome (Cash application)-->
-                    <span>Ventas</span>
+                    <i class="fas fa-dolly"></i> <!--Icono de Fon awesome (fa-dolly)-->
+                    <span>Salidas</span>
                 </a>
             </li>
             <li class="menu-item menu-item-static"> <!--Lista3-->
@@ -124,7 +124,6 @@
                     <div class="profile-avatar">
                         <img src="/img/Logo1.png" alt="Perfil">
                     </div>
-                    <i class="fa-solid fa-chevron-down"></i> <!--Icono de Fon awesome (chevron down)-->
                 </div>
             </div>
         </header>
@@ -171,7 +170,7 @@
                     </div>
                 <!--Agregar proveedor-->
                 <a href="#" class="btn-main-action" style="text-decoration: none;">
-                    <i class="fas fa-truck"></i> Agregar Proveedor
+                    <i class="fas fa-plus-circle"></i> Agregar Proveedor
                 </a>
             </div>
 
@@ -189,7 +188,7 @@
                     </thead>
                     <tbody> <!-- cuerpo principal de los datos/F1 -->
                         <tr>
-                            <td><strong>#001</strong></td>
+                            <td><strong>1</strong></td>
                             <td><strong>Cartas y Estrategia Distribuciones</strong></td>
                             <td>Cartas</td>
                             <td>
@@ -202,14 +201,14 @@
                             <td> <!-- Botones para editar y eliminar -->
                                 <div class="action-buttons">
                                     <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                     <span class="status-pill status-danger">Desativar</span></td>
                                 </div>
                             </td>
                         </tr>
                     </tbody> <!-- Fin del cuerpo principal de los datos -->
                     <tbody>
                         <tr>
-                            <td><strong>#002</strong></td>
+                            <td><strong>2</strong></td>
                             <td><strong>Protectores Elite S.A.</strong></td>
                             <td>Accesorios</td>
                             <td>
@@ -222,14 +221,14 @@
                             <td>
                                 <div class="action-buttons">
                                     <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                     <span class="status-pill status-danger">Desativar</span></td>
                                 </div>
                             </td>
                         </tr>
                     </tbody><!-- Fin del cuerpo principal de los datos -->
                     <tbody>
                         <tr>
-                            <td><strong>#003</strong></td>
+                            <td><strong>3</strong></td>
                             <td><strong>Importadora Meeples & Dados</strong></td>
                             <td>Juegos de Mesa</td>
                             <td>
@@ -242,14 +241,14 @@
                             <td>
                                 <div class="action-buttons">
                                     <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                     <span class="status-pill status-danger">Desativar</span></td>
                                 </div>
                             </td>
                         </tr>
                     </tbody><!-- Fin del cuerpo principal de los datos -->
                     <tbody>
                         <tr>
-                            <td><strong>#004</strong></td>
+                            <td><strong>4</strong></td>
                             <td><strong>Multiverso TCG Wholesale</strong></td>
                             <td>Castas</td>
                             <td>
@@ -262,7 +261,7 @@
                             <td>
                                 <div class="action-buttons">
                                     <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                     <span class="status-pill status-danger">Desativar</span></td>
                                 </div>
                             </td>
                         </tr>
@@ -270,7 +269,7 @@
 
                     <tbody>
                         <tr>
-                            <td><strong>#005</strong></td>
+                            <td><strong>5</strong></td>
                             <td><strong>Tableros del Mundo C.A.</strong></td>
                             <td>Juegos de Mesa</td>
                             <td>
@@ -283,7 +282,7 @@
                             <td>
                                 <div class="action-buttons">
                                     <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                    <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                     <span class="status-pill status-danger">Desativar</span></td>
                                 </div>
                             </td>
                         </tr>
@@ -295,7 +294,7 @@
                 <!-- Editar proveedores-->
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3><i class="fa-solid fa-truck-field"></i> Editar Proveedor</h3>
+                        <h3><i class="fas fa-plus-circle"></i> Editar Proveedor</h3>
                         <button class="close-modal" type="button" title="Cerrar">&times;</button>
                     </div>
                     <form action="" method="post" class="modal-form">
@@ -303,12 +302,12 @@
                             <h4>Datos de la Empresa</h4>
                             <div class="input-group">
                                 <label for="provider-name">Razón Social / Nombre:</label>
-                                <input type="text" id="provider-name" name="provider-name" value="Multiverso TCG Wholesale" required>
+                                <input type="text" id="provider-name" name="provider-name" placeholder="Ej: Multiverso TCG Wholesale" required>
                             </div>
                             <div class="form-row">
                                 <div class="input-group">
                                     <label for="provider-id">RIF / Identificación Fiscal:</label>
-                                    <input type="text" id="provider-id" name="provider-id" value="J-12345678-9" required>
+                                    <input type="text" id="provider-id" name="provider-id" placeholder="Ej: J-98765432-1." required>
                                 </div>
                                 <div class="input-group">
                                     <label for="provider-category">Tipo de Proveedor:</label>
@@ -325,17 +324,17 @@
                             <div class="form-row">
                                 <div class="input-group">
                                     <label for="phone">Teléfono de contacto:</label>
-                                    <input type="tel" id="phone" name="phone" value="+58 414-5550011" required>
+                                    <input type="tel" id="phone" name="phone" placeholder="+58 414-5550011" required>
                                 </div>
                                 <div class="input-group">
                                     <label for="email">Correo Corporativo:</label>
-                                    <input type="email" id="email" name="email" value="	erivas@multiversowholesale.com" required>
+                                    <input type="email" id="email" name="email" placeholder="nombre@gmail.com" required>
                                 </div>
                             </div>
                             
                             <div class="input-group">
                                 <label for="address">Dirección Fiscal:</label>
-                                <textarea id="address" name="address" rows="2" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px;">Av. Principal, Edificio Multiverso TCG Wholesale, Valencia.</textarea>
+                                <textarea id="address" name="address" rows="2" placeholder="Ubicacion fisica"></textarea>
                             </div>
                         </div>
 

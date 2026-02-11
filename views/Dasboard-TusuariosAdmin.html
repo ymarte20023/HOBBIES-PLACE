@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/dashboard.css"> <!-- Enlace al archivo CSS externo -->
     <script src="/js/script.js"></script><!-- Enlazar JavaScript con hojas HTML -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
-	<title>Ventas</title> <!-- DASHBOARD DE HOBBIES PLACE-->
+	<title>Usuarios</title> <!-- DASHBOARD DE HOBBIES PLACE-->
 </head> 
 <body>
 <div class="dashboard-wrapper"> <!-- Contenedor principal del Dashboard-->
@@ -34,8 +34,8 @@
             </li>
             <li class="menu-item menu-item-static"><!--Lista2-->
                 <a href="#" class="menu-link">
-                    <i class="fa-brands fa-cash-app"></i> <!--Icono de Fon awesome (Cash application)-->
-                    <span>Ventas</span>
+                    <i class="fas fa-dolly"></i> <!--Icono de Fon awesome (fa-dolly)-->
+                    <span>Salidas</span>
                 </a>
             </li>
             <li class="menu-item menu-item-static"> <!--Lista3-->
@@ -64,14 +64,7 @@
                     <span>Usuarios</span> 
                 </a>
             </li> 
-
-            <li class="menu-item menu-item-static"><!--Lista6-->
-                <a href="#" class="menu-link">
-                    <i class="fa-solid fa-truck"></i> <!--Icono de Fon awesome (Truck)-->
-                    <span>Proveedores</span>
-                </a>
-            </li>   
-
+            
             <li class="menu-item menu-item-static"><!--Lista7-->
                 <a href="#" class="menu-link">
                     <i class="fa-solid fa-gear"></i> <!--Icono de Fon awesome (Settings)-->
@@ -102,7 +95,6 @@
 </aside>
 <!--2.3 Fin del SIDEBAR-->
 
-
 <!--2.2 TOP NAVBAR/(Menu de Arriba)- TAREA: TOP NAVBAR para el Dasboard PERFIL DE USUARIO 12/01/2026-->
     <section class="main-view"> <!-- main-view es la que genera ese fondo gris.-->
         <header class="top-navbar">
@@ -125,37 +117,30 @@
                     <div class="profile-avatar">
                         <img src="/img/Logo1.png" alt="Perfil">
                     </div>
-                    <i class="fa-solid fa-chevron-down"></i> <!--Icono de Fon awesome (chevron down)-->
                 </div>
             </div>
         </header>
         <!--CONTENIDO DEL DASHBOARD/(Area de trabajo)- TAREA: Contenido del Dasboard 12/01/2026-->
-        <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->
-        <!-- tabla de ventas -->
+        <div class="dashboard-content"> <!-- Contenedor del contenido del dashboard-->      
+            <!-- Tabla de Usuarios - (Usuarios/asignaciones de roles)-->
             <div class="card-table">
                 <div class="table-header">
                     <div class="header-title">
                         <!--filtrado -->
                         <form class="filter-form">
-
                             <div class="input-group">
-                                <label for="filtro-fecha">Fecha</label>
-                                <input type="date" id="filtro-fecha">
+                                <label for="nombre">Usuario</label>
+                                <input type="text" id="nombre" placeholder="Nombre del Usuario">
                             </div>
-
-                            <div class="input-group">   <label for="filtro-estado">Estado</label>
-                                <select id="filtro-estado">
-                                    <option value="entregado">Entregado</option>
-                                    <option value="pendiente">Pendiente</option>
-                                    <option value="cancelado">Cancelado</option>
+                            <div class="input-group">
+                                <label for="estado-usuario">Estado</label>
+                                <select id="estado-usuario">
+                                    <option value="activo">Activo</option>
+                                    <option value="inactivo">Inactivo</option>
                                 </select>
                             </div>
                         </form>
                     </div>
-                    <!-- Agregar ventas -->
-                    <a href="#" class="btn-main-action" style="text-decoration: none;">
-                        <i class="fas fa-cart-plus"></i> Registrar Pedido
-                    </a>
                 </div>
 
                 <div class="table-responsive">
@@ -163,111 +148,62 @@
                         <thead> <!-- Encabezado de la tabla -->
                             <tr>
                                 <th>ID</th>
-                                <th>Producto / Cliente</th>
-                                <th>Cedula</th>
-                                <th>Unidades</th>
-                                <th>Total</th>
-                                <th>Fecha</th>
+                                <th>Nombre Completo</th>
+                                <th>Rol</th>
+                                <th>Correo Electrónico</th>
                                 <th>Estado</th>
-                                <th>Acciones</th>
                             </tr>
-                        </thead> <!-- Fin del encabezado de la tabla --> 
-                        <tbody> <!-- cuerpo principal de los datos/F1 -->
-                            <tr>
-                                <td><strong>#001</strong></td>
-                                <td>
-                                    <div style="display: flex; flex-direction: column;">
-                                        <span style="font-weight: 600;">Flexxfolio 480 24-Pocket – Red</span>
-                                        <small style="color: #64748b;">Cliente: Carlos Ruiz</small>
-                                    </div>
-                                </td>
-                                <td>V-12.345.678</td>
-                                <td>1</td>
-                                <td><strong>16.290,75 Bs</strong></td>
-                                <td>16/01/2026</td>
-                                <td><span class="status-pill status-success">Entregado</span></td>
-                                <td> <!-- Botones para editar y eliminar ventas-->
-                                    <div class="action-buttons">
-                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
-                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody><!-- Fin del cuerpo principal de los datos -->
+                        </thead> <!-- Fin del encabezado de la tabla -->
 
-                        <tbody><!--F2 -->
+                        <tbody><!-- F1 -->
                             <tr>
-                                <td><strong>#002</strong></td>
+                                <td><strong>1</strong></td>
                                 <td>
                                     <div style="display: flex; flex-direction: column;">
-                                        <span style="font-weight: 600;">Flexxfolio 360 18-Pocket – Blue</span>
-                                        <small style="color: #64748b;">Cliente: Ana Martínez</small>
+                                        <span style="font-weight: 600;">Edgar Reyes</span>
+                                        <small style="color: #64748b;">Última conexión: Hoy</small>
                                     </div>
                                 </td>
-                                <td>V-23.456.789</td>
-                                <td>1</td>
-                                <td><strong>16.290,75 Bs</strong></td>
-                                <td>15/01/2026</td>
-                                <td><span class="status-pill status-pending">Pendiente</span></td>
-                                <td> <!-- Botones para editar y eliminar ventas-->
-                                    <div class="action-buttons">
-                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
-                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
-                                    </div>
-                                </td>
+                                <td><span class="role-badge"> <strong>Super Administrador</strong></span></td>
+                                <td>hobbiesplacevzla@gmail.com</td>
+                                <td><span class="status-pill status-success">Activo</span></td>
                             </tr>
                         </tbody>
 
-                        <tbody> <!--F3 -->
+                        <tbody><!-- F2 -->
                             <tr>
-                                <td><strong>#003</strong></td>
+                                <td><strong>2</strong></td>
                                 <td>
                                     <div style="display: flex; flex-direction: column;">
-                                        <span style="font-weight: 600;">FlipTray 80+ Xenoskin – Blue</span>
-                                        <small style="color: #64748b;">Cliente: Carlos Aguiar</small>
+                                        <span style="font-weight: 600;">Daniel Reyes</span>
+                                        <small style="color: #64748b;">Última conexión: Ayer</small>
                                     </div>
                                 </td>
-                                <td>V-34.567.890</td>
-                                <td>1</td>
-                                <td><strong>18.618,00 Bs</strong></td>
-                                <td>15/01/2026</td>
-                                <td><span class="status-pill status-success">Entregado</span></td>
-                                <td> <!-- Botones para editar y eliminar ventas-->
-                                    <div class="action-buttons">
-                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
-                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
-                                    </div>
-                                </td>
+                                <td><span class="role-badge"> <strong>Administrador secundario</strong></span></td>
+                                <td>DanielReyes@email.com</td>
+                                <td><span class="status-pill status-success">Activo</span></td>
                             </tr>
                         </tbody>
-                        <tbody> <!--F4 -->
+
+                        <tbody> <!-- F3 -->
                             <tr>
-                                <td><strong>#004</strong></td>
+                                <td><strong>3</strong></td>
                                 <td>
                                     <div style="display: flex; flex-direction: column;">
-                                        <span style="font-weight: 600;">Sidewinder 100+ Xenoskin – Green</span>
-                                        <small style="color: #64748b;">Cliente: Daniel Parra</small>
+                                        <span style="font-weight: 600;">Salvador Torres</span>
+                                        <small style="color: #64748b;">Última conexión: Hoy</small>
                                     </div>
                                 </td>
-                                <td>V-45.678.901</td>
-                                <td>1</td>
-                                <td><strong>18.618,00 Bs</strong></td>
-                                <td>15/01/2026</td>
-                                <td><span class="status-pill status-pending">Pendiente</span></td>
-                                <td><!-- Botones para editar y eliminar ventas-->
-                                    <div class="action-buttons">
-                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
-                                        <button class="btn-icon delete" title="Eliminar"><i class="fas fa-trash"></i></button>
-                                    </div>
-                                </td>
+                                <td><span class="role-badge"> <strong>Usuario</strong></span></td>
+                                <td>SalvadorTorrez@email.com</td>
+                                <td><span class="status-pill status-danger">Inactivo</span></td>
                             </tr>
                         </tbody>
-                    </table> <!--Fin de la tabla -->
+                    </table> <!-- Fin de la tabla completa -->
                 </div>
-            </div> <!-- Fin del codigo-->  
+            </div> <!--Fin del codigo -->
         </div>
     </section> 
 </div> <!-- fin del Contenedor principal del Dashboard-->
-
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- Dasboar - SuperAdministrador (HOME) - Inventario-->
+<!DOCTYPE html> <!-- Dasboar completo - SuperAdministrador.-->
 <html lang="es"> <!-- <html> etiqueta raíz de toda la página HTML.-->
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/dashboard.css"> <!-- Enlace al archivo CSS externo -->
     <script src="/js/script.js"></script><!-- Enlazar JavaScript con hojas HTML -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--cdm de los iconos de fontawesome-->
-	<title>Inventario</title> <!-- DASHBOARD DE HOBBIES PLACE-->
+	<title>Agregar Inventario</title> <!-- DASHBOARD DE HOBBIES PLACE-->
 </head> 
 <body>
 <div class="dashboard-wrapper"> <!-- Contenedor principal del Dashboard-->
@@ -58,19 +58,12 @@
         
         <div class="menu-group"><!--3 Grupo-->
         <span class="group-title">Administración</span>
-            <li class="menu-item menu-item-static"><!--Lista5-->
+            <li class=><!--Lista5-->
                 <a href="#" class="menu-link">
                     <i class="fa-solid fa-user-gear"></i> <!--Icono de Fon awesome (User gear)-->
                     <span>Usuarios</span> 
                 </a>
             </li> 
-
-            <li class="menu-item menu-item-static"><!--Lista6-->
-                <a href="#" class="menu-link">
-                    <i class="fa-solid fa-truck"></i> <!--Icono de Fon awesome (Truck)-->
-                    <span>Proveedores</span>
-                </a>
-            </li>   
 
             <li class="menu-item menu-item-static"><!--Lista7-->
                 <a href="#" class="menu-link">
@@ -118,12 +111,13 @@
 
                 <div class="user-profile">
                     <div class="profile-text">
-                        <span class="user-name">Super-Admin</span>
+                        <span class="user-name">Administrador</span>
                         <span class="user-status">En línea</span>
                     </div>
                     <div class="profile-avatar">
                         <img src="/img/Logo1.png" alt="Perfil">
                     </div>
+
                 </div>
             </div>
         </header>
@@ -138,7 +132,7 @@
                         <form class="filter-form">
                             <div class="input-group">
                                 <label for="nombre">Nombre del Producto</label>
-                                <input type="text" id="nombre" placeholder="Nombre del Producto">
+                                <input type="text" id="nombre" placeholder="Insertar Nombre del Producto">
                             </div>
                             <div class="input-group">   <!-- Categoria -->
                                 <label for="tipo">Categoria</label>
@@ -161,7 +155,7 @@
                         <thead> <!-- Encabezado de la tabla -->
                             <tr>
                                 <th>ID</th>
-                                <th>Producto</th>
+                                <th>Nombre del Producto</th>
                                 <th>Imagen</th>
                                 <th>Categoría</th>
                                 <th>Descripción</th>
@@ -171,8 +165,45 @@
                             </tr>
                         </thead> <!-- Fin del encabezado de la tabla -->
                         <tbody> <!-- cuerpo principal de los datos/F1 -->
+
+                        <tbody> <!-- F2 -->
                             <tr>
                                 <td><strong>1</strong></td>
+                                <td><strong>Limited Pack 2025</strong></td>
+                                <td><img src="/img/BoostersLPack20252.png" alt="" width="50"></td>
+                                <td>Cartas</td>
+                                <td>El Limited Pack World Championship 2025 es un set exclusivo de Yu-Gi-Oh! TCG lanzado para el mundial de 2025 en Francia, que incluye 20 cartas (más 1 especial)</td>
+                                <td>24</td>
+                                <td><strong>2.660,75 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <span class="status-pill status-danger">Desativar</span></td>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> <!-- Fin del cuerpo principal de los datos -->
+
+                        <tbody> <!-- F1 -->
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td><strong>Phantom Revenge</strong></td>
+                                <td><img src="/img/BoostersPRevenge1.png" alt="" width="50"></td>
+                                <td>Cartas</td>
+                                <td>El sobre de expansión Yu-Gi-Oh! Phantom Revenge (Venganza Fantasma), lanzado a finales de 2025</td>
+                                <td>48</td>
+                                <td><strong>2.660,75 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                         <span class="status-pill status-danger">Desativar</span></td>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> <!-- Fin del cuerpo principal de los datos -->
+                        </tbody>
+                            <tr>
+                                <td><strong>3</strong></td>
                                 <td><strong>Flexxfolio 360 18-Pocket – Blue</strong></td>
                                 <td><img src="/img/FlexxfolioBlue.png" alt="Flexxfolio Blue" width="50"></td>
                                 <td>Accesorios</td>
@@ -181,15 +212,34 @@
                                 <td><strong>16.290,75 Bs</strong></td>
                                 <td><!-- Botones para agregar y eliminar productos -->
                                     <div class="action-buttons">
-                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                        <span class="status-pill status-danger">Desativar</span></td>
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                         <span class="status-pill status-danger">Desativar</span></td>
                                     </div>
                                 </td>
                             </tr>
                         </tbody> <!-- Fin del cuerpo principal de los datos -->
+
+                        <tbody> <!-- F4 -->
+                            <tr>
+                                <td><strong>4</strong></td>
+                                <td><strong>One Piece Starter Deck ST27</strong></td>
+                                <td><img src="/img/ST27-Marshall-D-Teach.png" alt="" width="50"></td>
+                                <td>Cartas</td>
+                                <td>El Starter Deck ST-27 Black Marshall D. Teach es un mazo inicial de One Piece TCG de color negro, enfocado en una estrategia de control y eliminación.</td>
+                                <td>2</td>
+                                <td><strong>9.578,70 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                         <span class="status-pill status-danger">Desativar</span></td>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> <!-- Fin del cuerpo principal de los datos -->
+
                         <tbody> <!-- F2 -->
                             <tr>
-                                <td><strong>2</strong></td>
+                                <td><strong>5</strong></td>
                                 <td><strong>Flexxfolio 360 18-Pocket – Red</strong></td>
                                 <td><img src="/img/FlexxfolioRed.png" alt="Flexxfolio Red" width="50"></td>
                                 <td>Accesorios</td>
@@ -198,15 +248,51 @@
                                 <td><strong>16.290,75 Bs</strong></td>
                                 <td><!-- Botones para agregar y eliminar productos -->
                                     <div class="action-buttons">
-                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                        <span class="status-pill status-danger">Desativar</span></td>
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                         <span class="status-pill status-danger">Desativar</span></td>
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
+
+                        <tbody> <!-- cuerpo principal de los datos/F1 -->
+                            <tr>
+                                <td><strong>6</strong></td>
+                                <td><strong>Magic 60 – Card Theme Pirates</strong></td>
+                                <td><img src="/img/Magic60Card.png" alt="" width="50"></td>
+                                <td>Cartas</td>
+                                <td>El tema de cartas Magic 60 – Card Theme Pirates es una colección de cartas temáticas basadas en el universo de los piratas.</td>
+                                <td>4</td>
+                                <td><strong>14.900,20 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                         <span class="status-pill status-danger">Desativar</span></td>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> <!-- Fin del cuerpo principal de los datos -->
+
+                        <tbody> <!--F3 -->
+                            <tr>
+                                <td><strong>7</strong></td>
+                                <td><strong>Catan Navegantes</strong></td>
+                                <td><img src="/img/Catan3.png" alt="Catan3" width="50"></td>
+                                <td>Juegos de mesa</td>
+                                <td>Catan: Navegantes es una expansión del popular juego de estrategia diseñada por Klaus Teuber, donde 3-4 jugadores expanden sus civilizaciones a través de múltiples islas, construyendo barcos y explorando nuevas rutas marítimas</td>
+                                <td>1</td>
+                                <td><strong>24.276,00 Bs</strong></td>
+                                <td><!-- Botones para agregar y eliminar productos -->
+                                    <div class="action-buttons">
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
+                                         <span class="status-pill status-danger">Desativar</span></td>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> <!-- Fin del cuerpo principal de los datos -->
                         <tbody> <!-- F3 -->
                             <tr>
-                                <td><strong>3</strong></td>
+                                <td><strong>8</strong></td>
                                 <td><strong>Sidewinder 100+ Xenoskin – Green</strong></td>
                                 <td><img src="/img/SidewinderGreen.png" alt="Sidewinder Green" width="50"></td>
                                 <td>Accesorios</td>
@@ -215,41 +301,7 @@
                                 <td><strong>13.963,50 Bs</strong></td>
                                 <td><!-- Botones para agregar y eliminar productos -->
                                     <div class="action-buttons">
-                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                        <span class="status-pill status-danger">Desativar</span></td>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody> <!-- F4 -->
-                            <tr>
-                                <td><strong>4</strong></td>
-                                <td><strong>Sidewinder 100+ Xenoskin – Red</strong></td>
-                                <td><img src="/img/SidewinderRed.png" alt="Sidewinder Red" width="50"></td>
-                                <td>Accesorios</td>
-                                <td>Estuche robusto y elegante para mazos de cartas, color rojo.</td>
-                                <td>1</td>
-                                <td><strong>13.963,50 Bs</strong></td>
-                                <td><!-- Botones para agregar y eliminar productos -->
-                                    <div class="action-buttons">
-                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                        <span class="status-pill status-danger">Desativar</span></td>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody> <!-- F5 -->
-                            <tr>
-                                <td><strong>5</strong></td>
-                                <td><strong>FlipTray 80+ Xenoskin – Blue</strong></td>
-                                <td><img src="/img/FlipnTrayBlue.png" alt="FlipTray Blue" width="50"></td>
-                                <td>Accesorios</td>
-                                <td> Caja de cartas de alta calidad, de color azul.</td>
-                                <td>2</td>
-                                <td><strong>18.618,00 Bs</strong></td>
-                                <td><!-- Botones para agregar y eliminar productos -->
-                                    <div class="action-buttons">
-                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
                                         <span class="status-pill status-danger">Desativar</span></td>
                                     </div>
                                 </td>
@@ -257,7 +309,7 @@
                         </tbody>
                         <tbody> <!-- F6 -->
                             <tr>
-                            <td><strong>6</strong></td>
+                            <td><strong>9</strong></td>
                                 <td><strong>FlipTray 80+ Xenoskin – Purple</strong></td>
                                 <td><img src="/img/FlipnTrayPurple.png" alt="FlipTray Purple" width="50"></td>
                                 <td>Accesorios</td>
@@ -266,17 +318,85 @@
                                 <td><strong>18.618,00 Bs</strong></td>
                                 <td> <!-- Botones para agregar y eliminar productos -->
                                     <div class="action-buttons">
-                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></button>
                                         <span class="status-pill status-danger">Desativar</span></td>
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
+
                     </table><!-- Fin de la tabla completa -->
                 </div>
             </div> <!--Fin del codigo -->
         </div>
+        <!--Fin del codigo -->
+        <div id="modalInventario" class="modal-container"> 
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-plus-circle"></i> Registrar Nuevo Producto</h3>
+                    <button class="close-modal" type="button">&times;</button>
+                </div>
+
+                <form class="modal-form">
+                    <div class="form-grid">
+                        <div class="form-section">
+                            <h4>Información Básica</h4>
+                            <div class="input-group">
+                                <label for="prod-nombre">Nombre del Producto</label>
+                                <input type="text" id="prod-nombre" placeholder="Ej: Magic 60 – Card Theme Pirates" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="prod-categoria">Categoría</label>
+                                    <select id="prod-categoria" required>
+                                        <option value="cartas">Cartas</option>
+                                        <option value="accesorios">Accesorios</option>
+                                        <option value="juegos-mesa">Juegos de Mesa</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label for="prod-imagen">URL de la Imagen / Archivo</label>
+                                    <input type="text" id="prod-imagen" placeholder="/img/nuevo-producto.png">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4>Valores y Existencia</h4>
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="prod-stock">Stock Inicial</label>
+                                    <input type="number" id="prod-stock" placeholder="0" min="0" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="prod-precio">Precio Unitario (Bs)</label>
+                                    <input type="number" step="0.01" id="prod-precio" placeholder="0.00" required>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="prod-sku">ID / SKU Personalizado</label>
+                                <input type="text" id="prod-sku" placeholder="Ej: #010">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section full-width">
+                        <div class="input-group">
+                            <label for="prod-descripcion">Descripción del Producto</label>
+                            <textarea id="prod-descripcion" rows="3" placeholder="Describe las características del producto..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary">Cancelar</button>
+                            <button type="submit" class="btn-main-action">Guardar en Inventario</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </section> 
-</div> <!-- fin del Contenedor principal del Dashboard-->
 </body>
 </html>
