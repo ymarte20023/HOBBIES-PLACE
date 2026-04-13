@@ -19,14 +19,14 @@
         <div class="form-wrapper"><!--Contenedor formulario-->
         <img class="img" src="/img/Logo1.png" alt="Logo de Hobbies Place"/> <!--Logo de Hobbies Place (Logo) -->
             <h1>Iniciar Sesión</h1>
-            <form action="" method="" name="login"> <!--1.2 Formulario de registro-->
+            <form action="../controllers/LoginController.php" method="POST" name="login"> <!--1.2 Formulario de registro-->
                 <div> <!--Los div son divisiones-->
                      <label><i class="fa-solid fa-user"></i></label><!--icono de font awesome (user name)-->
-                    <input type="email" id="email" name="email" placeholder="Nombre de usuario" >
+                    <input type="text" id="username" name="username" placeholder="Nombre de usuario" >
                 </div>
                 <div><!--Segunda divisiones del div-->
                     <label><i class="fa-solid fa-lock"></i></label><!--icono de font awesome (Password)-->
-                    <input type="password" id="pwd" name="pwd" required="Contraseña" placeholder="Contraseña">
+                    <input type="password" id="password" name="password" required="Contraseña" placeholder="Contraseña">
                 </div>
                 <!-- checkbox Recordar la contraseña para el usuario -->
                 <div class="">

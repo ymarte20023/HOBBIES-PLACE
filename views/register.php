@@ -17,7 +17,7 @@
         <div class="form-wrapper"> <!--Contenedor formulario-->
         <img class="img" src="/img/Logo1.png" alt="Logo de Hobbies Place"/> <!--Logo de Hobbies Place (Register)-->
             <h1>Registrarse</h1> 
-            <form action="" method="" name="registro"> <!--1.2 Formulario de registro-->
+            <form action="../controllers/RegisterController.php" method="POST" name="registro"> <!--1.2 Formulario de registro-->
                 <div> <!--Divisiones-->
                     <label><i class="fa-solid fa-user"></i></label><!--icono de font awesome (user name)-->
                     <input type="text" name="fullname" id="fullname" placeholder="Nombre de usuario" required>
@@ -28,7 +28,7 @@
                 </div>
                 <div> <!--Tercera division (DIV)-->
                     <label><i class="fa-solid fa-lock"></i></label><!--icono de font awesome (Password)-->
-                    <input type="password" id="pwd" name="pwd" required placeholder="Contraseña">
+                    <input type="password" id="password" name="password" required placeholder="Contraseña">
                 </div>
             <!--Boton para registrase-->
             <button type="submit" class="btn-main">Registrarse</button>

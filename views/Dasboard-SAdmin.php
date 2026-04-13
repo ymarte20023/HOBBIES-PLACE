@@ -36,7 +36,9 @@
                 <a href="#" class="menu-link">
                     <i class="fas fa-dolly"></i> <!--Icono de Fon awesome (fa-dolly)-->
                     <span>Salidas</span>
+                    <a href="index.html"></a> <!-- Enlace a página de salidas -->
                 </a>
+
             </li>
             <li class="menu-item menu-item-static"> <!--Lista3-->
                 <a href="#" class="menu-link">
